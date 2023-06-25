@@ -19,7 +19,7 @@ public class ShootButton : MonoBehaviour
         if (characterController.HasAmmo())
         {
             characterController.Shoot();
-        //    characterController.LookAtTarget();
+            characterController.LookAtTarget();
         }
         // Вызываем стрельбу у персонажа
         

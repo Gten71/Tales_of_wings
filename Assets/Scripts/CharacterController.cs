@@ -13,22 +13,48 @@ public class CharacterController : MonoBehaviour
     public int maxAmmo = 5;
     private int currentAmmo;
 
+
+
+
+    public float moveSpeed = 5f;
+    public Joystick joystick;
+
+    private Rigidbody2D rb;
+    private bool isFacingRight = true;
+
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentAmmo = maxAmmo;
     }
-   
-
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"));
+        float horizontalInput = joystick.Horizontal;
+        float verticalInput = joystick.Vertical;
+
+        Vector2 movement = new Vector2(horizontalInput, verticalInput);
+        rb.velocity = movement * moveSpeed;
+
+        // Изменение направления при повороте джойстика влево
+        if (horizontalInput < 0 && isFacingRight)
         {
-            // При нажатии кнопки Fire1 (например, при касании экрана) наводимся на врага и стреляем
-          //  LookAtTarget();
-           // Shoot();
+            FlipCharacter();
+        }
+        else if (horizontalInput > 0 && !isFacingRight)
+        {
+            FlipCharacter();
         }
     }
+
+    private void FlipCharacter()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+
     public bool HasAmmo()
     {
         return currentAmmo > 0;
