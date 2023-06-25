@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public Transform target; // Ссылка на объект-врага
+     public Transform target; // Ссылка на объект-врага
     public GameObject bulletPrefab; // Префаб снаряда
     public Transform firePoint; // Точка, откуда будет выпущен снаряд
     public float bulletSpeed = 10f; // Скорость снаряда
     public int bulletDamage = 50;
     public int maxAmmo = 5;
     private int currentAmmo;
+    private bool isShooting = false;
 
 
 
@@ -79,7 +80,7 @@ public class CharacterController : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
         bulletRigidbody.velocity = firePoint.right * bulletSpeed;
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+     //   Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
         if (bulletComponent != null)
