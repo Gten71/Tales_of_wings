@@ -22,6 +22,10 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isFacingRight = true;
 
+    //анимации
+    public Animator animator;
+    private Vector2 direction;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,7 +40,12 @@ public class CharacterController : MonoBehaviour
 
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
         rb.velocity = movement * moveSpeed;
-
+        //анимации
+        direction.x = movement.x;
+        direction.y = movement.y;
+        animator.SetFloat("Horizontal", direction.x);
+        animator.SetFloat("Vertical", direction.y);
+        animator.SetFloat("Speed", direction.sqrMagnitude);
         // Изменение направления при повороте джойстика влево
         if (horizontalInput < 0 && isFacingRight)
         {
