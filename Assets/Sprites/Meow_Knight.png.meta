@@ -1,0 +1,1841 @@
+fileFormatVersion: 2
+guid: 9f7dd815274383b459740eab626914c9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Meow_Knight_6
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54cb18744e92ebb4d9f55238fe13f71f
+      internalID: -2124443549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_9
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaea4d589be49e543a40af08ac363976
+      internalID: -1477511290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_14
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 576
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a400f23587db843ac69372b87b7f02
+      internalID: 647076911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_24
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 576
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d327612ca86e940b849fdcef2659e4
+      internalID: -603977827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_34
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 572
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc5c38042ccf534b8550043e18202e0
+      internalID: 1727713214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_64
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 496
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0097983415d534799cebbc317b69a9
+      internalID: -1320563508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 416
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924ce3928eaba3a46aeb6f8dc395666f
+      internalID: 162067919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_77
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365afb82e8adcb6468500c35adb9634b
+      internalID: 80421261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_80
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5ba97110e3ad44ca0f795d655a25be
+      internalID: -1889833172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_120
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e790f9011a8fdf249abce8ee2c8a0c59
+      internalID: -1427232696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_122
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 256
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f5c3ff2cd38ea42bc38d64efc15b0f
+      internalID: -1297598094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_129
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 249
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00758f29d942124084e1f6cec3d72f9
+      internalID: -1515263223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_132
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 256
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cce4b8c4a0a70d418c3a43999fac765
+      internalID: 1335377570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_159
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 176
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18489fcfd5a301b4899569afe9dfb50f
+      internalID: 551908470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_167
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 94
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6dd1183cbb55e64fb9ab16c29de06f5
+      internalID: 1739666468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_169
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 94
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de41a89e212ba5b40917f299b261b8ba
+      internalID: 1810697000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_171
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 94
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fd964ec155bc84982d678e1569d77a
+      internalID: 1663075271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_174
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 96
+        width: 18
+        height: 22
+      alignment: 9
+      pivot: {x: 0.4938185, y: 0.38015124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3a40c560174d046914cd4851a8f460
+      internalID: -1270012890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_176
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 96
+        width: 43
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89b47a5ab055404a86320340ce99861
+      internalID: -1369835938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_178
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 96
+        width: 45
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf10bd6e0c53da24ca6bdaf3c07b272c
+      internalID: 1346174687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_180
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 96
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8add5d89925cb34aa66d0930c51beb4
+      internalID: 1000323633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_183
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 96
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b078cc31898a5a4ca60c6d8d80049cc
+      internalID: 693021831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_186
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 96
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe73a9342a7cbf4a801a13c526184ce
+      internalID: -2008282517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_195
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 16
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a650c92f5cf2348b423aa7f88338ed
+      internalID: -888774635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_196
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268edfabfbd9e0b40bc1c649d73b36c3
+      internalID: -1051417600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7fdd24f3fe12348a9dbf14ebe72068
+      internalID: 1028383694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b850f9cd04b8bc64c9231bda18ea4a2b
+      internalID: 1700968803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 656
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d345edb50567345b7a2067fb517040
+      internalID: 376360153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c12abec9678bf49839cfca81955391
+      internalID: -1011467197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 656
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c2849b2f154d1439331d998e9d11cc
+      internalID: 971154706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 656
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53e289cdffde8a4eb20a85b3bae2e8e
+      internalID: -889405844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_11
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 656
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4064d856f30cd284c8b67b40cbc06af2
+      internalID: 1055797969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_16
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 576
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe3dc7f5719613458fa30535ac0ddda
+      internalID: 1846785886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_18
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 576
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c7970ee66730046ac1c587ddfff7ee
+      internalID: -351674785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_21
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 576
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35027cef6882bc64dab02fc6de2afbdd
+      internalID: -2077574015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_27
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 576
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e6cf14ff8626740afe693871c78897
+      internalID: -673279332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_30
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 576
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff6a6d3aad7458459b55237279143a7
+      internalID: -566157571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_33
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 574
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c324a26479a1a04b8bf8d95fe093fc5
+      internalID: 620234300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_43
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 494
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23a402d05d0e3940b2308fd57933826
+      internalID: -1663328286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_45
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 495
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351d8323ece67f74a802e8811548616c
+      internalID: -464763782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_48
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 496
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ee5ca6384206f42993514211613290
+      internalID: -340650556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_51
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 496
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850218184e1dd2b4199d2b62f5e0dc82
+      internalID: 445456623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_54
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 496
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bcfcd6f248ad94e9995a87b437580a
+      internalID: 161554334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_57
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 496
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefcd920d3276cf4c8f064855b4ec76d
+      internalID: 140366357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_60
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 496
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef323388bd4e89e408a0d6c85265a523
+      internalID: 1951315881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_62
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 496
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfc042a5dea2544dbc787eb6b263371
+      internalID: -501037719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_69
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 416
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d45cfc29eabc3a4f97d9a1872e5f437
+      internalID: 1641514401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_71
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 416
+        width: 31
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00147b69a74fa5546978a59c3d7edfa9
+      internalID: -613815061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_75
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 416
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bece85d53c88ede48b2ee8cddc343230
+      internalID: 1017626303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_78
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9465d8a2dda242a45a1ef3eb3e341dfc
+      internalID: 1127792202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_79
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e075754e2325a44a3fa7c34c0a49fd
+      internalID: 93463299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_81
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2814f4d7259e50b479afbd5ff55e4f4a
+      internalID: 616718445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_88
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d05e089ad15594d86043b47e19a2b5
+      internalID: 1928470650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_90
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 336
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7898d9de2390b24bb05455438c4fb63
+      internalID: 594568199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_91
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d45ebf7c018fa74f9e80e3e37b838f9
+      internalID: 650113611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_92
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64985d054632c4f42a5b246161dbea1d
+      internalID: -586050443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_93
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957a9321d5a80f1418f412faf3ae9bf8
+      internalID: 1572070633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_95
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 336
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba14de8a2efaf94a8caa5165833a684
+      internalID: 2065004303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_96
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 336
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03867ab4c9d7584439305e8081672588
+      internalID: -1665816691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_98
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 333
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08451379c6f2c0c45b14ad8c960f125a
+      internalID: -1289921436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_101
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 334
+        width: 36
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49aeb56f2f4ce2d43a0346dc690d4a76
+      internalID: 2018291254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_124
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af11da91ea2f5804993df5ff1d9a49ab
+      internalID: -1901659416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_126
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 256
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af633e13bfa714439d171894b1d5920
+      internalID: -392524840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_128
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 249
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4c416e58cce7045bf7e0d76e45569e
+      internalID: -1763976407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_130
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 251
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b316041ae907f334c9d7777d94b20803
+      internalID: 928028022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_135
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 256
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce866ccf61e058548824b1ed14f49131
+      internalID: 176929245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_152
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 176
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b42ca7c5dc70234bb5e2254593c3848
+      internalID: -1576981181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_154
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c279e8f8a9aff874fb4909e9c5960301
+      internalID: 706269231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_156
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 176
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1460d39aaef8945a63bd28a1be6aee
+      internalID: -2099835585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_161
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88eb2070a8ed40e4a813c3038604f7cf
+      internalID: 1985957230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow_Knight_162
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 175
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea3cbcba7a32a042bf60500ade87df6
+      internalID: -1562675293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Meow_Knight_0: 1167884228
+      Meow_Knight_1: -94279583
+      Meow_Knight_10: 494079021
+      Meow_Knight_100: 1680790123
+      Meow_Knight_101: 2018291254
+      Meow_Knight_102: -1121040393
+      Meow_Knight_103: -103238649
+      Meow_Knight_104: -1431882752
+      Meow_Knight_105: 937951904
+      Meow_Knight_106: 416474218
+      Meow_Knight_107: 776344811
+      Meow_Knight_108: 1245648773
+      Meow_Knight_109: -535442042
+      Meow_Knight_11: 1055797969
+      Meow_Knight_110: 775655981
+      Meow_Knight_111: 959288206
+      Meow_Knight_112: 707568058
+      Meow_Knight_113: 302090419
+      Meow_Knight_114: -489978162
+      Meow_Knight_115: 145482076
+      Meow_Knight_116: -1307525477
+      Meow_Knight_117: 1783988987
+      Meow_Knight_118: 1349341430
+      Meow_Knight_119: -162464765
+      Meow_Knight_12: 1826349765
+      Meow_Knight_120: -1427232696
+      Meow_Knight_121: 16153305
+      Meow_Knight_122: -1297598094
+      Meow_Knight_123: 314578629
+      Meow_Knight_124: -1901659416
+      Meow_Knight_125: 781115000
+      Meow_Knight_126: -392524840
+      Meow_Knight_127: -374315822
+      Meow_Knight_128: -1763976407
+      Meow_Knight_129: -1515263223
+      Meow_Knight_13: 1167140893
+      Meow_Knight_130: 928028022
+      Meow_Knight_131: -1505390129
+      Meow_Knight_132: 1335377570
+      Meow_Knight_133: 700487845
+      Meow_Knight_134: 158087185
+      Meow_Knight_135: 176929245
+      Meow_Knight_136: 610872936
+      Meow_Knight_137: -1821611213
+      Meow_Knight_138: 1855583491
+      Meow_Knight_139: -154542956
+      Meow_Knight_14: 647076911
+      Meow_Knight_140: -1080119882
+      Meow_Knight_141: 1374127542
+      Meow_Knight_142: 1585142302
+      Meow_Knight_143: -1937126682
+      Meow_Knight_144: -346176031
+      Meow_Knight_145: -114550450
+      Meow_Knight_146: -450428801
+      Meow_Knight_147: -1676311328
+      Meow_Knight_148: 1289446989
+      Meow_Knight_149: 1396977828
+      Meow_Knight_15: 5369343
+      Meow_Knight_150: 1634805026
+      Meow_Knight_151: 474663983
+      Meow_Knight_152: -1576981181
+      Meow_Knight_153: -781386809
+      Meow_Knight_154: 706269231
+      Meow_Knight_155: 328643020
+      Meow_Knight_156: -2099835585
+      Meow_Knight_157: -1845492284
+      Meow_Knight_158: 717228592
+      Meow_Knight_159: 551908470
+      Meow_Knight_16: 1846785886
+      Meow_Knight_160: -1074088601
+      Meow_Knight_161: 1985957230
+      Meow_Knight_162: -1562675293
+      Meow_Knight_163: 2137840711
+      Meow_Knight_164: -919178612
+      Meow_Knight_165: -395342505
+      Meow_Knight_166: -351967363
+      Meow_Knight_167: 1739666468
+      Meow_Knight_168: 900467440
+      Meow_Knight_169: 1810697000
+      Meow_Knight_17: -595731013
+      Meow_Knight_170: 847732473
+      Meow_Knight_171: 1663075271
+      Meow_Knight_172: -334016734
+      Meow_Knight_173: 2008692994
+      Meow_Knight_174: -1270012890
+      Meow_Knight_175: 722835218
+      Meow_Knight_176: -1369835938
+      Meow_Knight_177: -90601618
+      Meow_Knight_178: 1346174687
+      Meow_Knight_179: -856018263
+      Meow_Knight_18: -351674785
+      Meow_Knight_180: 1000323633
+      Meow_Knight_181: -136939795
+      Meow_Knight_182: -525841745
+      Meow_Knight_183: 693021831
+      Meow_Knight_184: 911972324
+      Meow_Knight_185: 481205518
+      Meow_Knight_186: -2008282517
+      Meow_Knight_187: -1312128246
+      Meow_Knight_188: -1329363713
+      Meow_Knight_189: -1482764582
+      Meow_Knight_19: -2139710266
+      Meow_Knight_190: -886618867
+      Meow_Knight_191: 495299441
+      Meow_Knight_192: 1647490385
+      Meow_Knight_193: 564552432
+      Meow_Knight_194: -685373376
+      Meow_Knight_195: -888774635
+      Meow_Knight_196: -1051417600
+      Meow_Knight_2: 1028383694
+      Meow_Knight_20: -1915551689
+      Meow_Knight_21: -2077574015
+      Meow_Knight_22: -433542544
+      Meow_Knight_23: -890496227
+      Meow_Knight_24: -603977827
+      Meow_Knight_25: -82308153
+      Meow_Knight_26: -141055968
+      Meow_Knight_27: -673279332
+      Meow_Knight_28: -1312168122
+      Meow_Knight_29: 1724626686
+      Meow_Knight_3: 1700968803
+      Meow_Knight_30: -566157571
+      Meow_Knight_31: 758062786
+      Meow_Knight_32: 38516246
+      Meow_Knight_33: 620234300
+      Meow_Knight_34: 1727713214
+      Meow_Knight_35: 2006178329
+      Meow_Knight_36: 532227177
+      Meow_Knight_37: 388331586
+      Meow_Knight_38: -1915388961
+      Meow_Knight_39: -1926882658
+      Meow_Knight_4: 376360153
+      Meow_Knight_40: -1064732659
+      Meow_Knight_41: -1472312267
+      Meow_Knight_42: -1676074079
+      Meow_Knight_43: -1663328286
+      Meow_Knight_44: 1383354818
+      Meow_Knight_45: -464763782
+      Meow_Knight_46: 488050181
+      Meow_Knight_47: -1965890967
+      Meow_Knight_48: -340650556
+      Meow_Knight_49: -167285128
+      Meow_Knight_5: -1011467197
+      Meow_Knight_50: 2118637346
+      Meow_Knight_51: 445456623
+      Meow_Knight_52: 593051964
+      Meow_Knight_53: 2131117249
+      Meow_Knight_54: 161554334
+      Meow_Knight_55: -1423053871
+      Meow_Knight_56: 86759188
+      Meow_Knight_57: 140366357
+      Meow_Knight_58: -1025188628
+      Meow_Knight_59: -1381816884
+      Meow_Knight_6: -2124443549
+      Meow_Knight_60: 1951315881
+      Meow_Knight_61: 1192599517
+      Meow_Knight_62: -501037719
+      Meow_Knight_63: 687746825
+      Meow_Knight_64: -1320563508
+      Meow_Knight_65: 108803705
+      Meow_Knight_66: -1161609473
+      Meow_Knight_67: -823113841
+      Meow_Knight_68: -391818007
+      Meow_Knight_69: 1641514401
+      Meow_Knight_7: 971154706
+      Meow_Knight_70: -1831421260
+      Meow_Knight_71: -613815061
+      Meow_Knight_72: 184141108
+      Meow_Knight_73: 162067919
+      Meow_Knight_74: -1309556620
+      Meow_Knight_75: 1017626303
+      Meow_Knight_76: 728845849
+      Meow_Knight_77: 80421261
+      Meow_Knight_78: 1127792202
+      Meow_Knight_79: 93463299
+      Meow_Knight_8: -889405844
+      Meow_Knight_80: -1889833172
+      Meow_Knight_81: 616718445
+      Meow_Knight_82: -900170006
+      Meow_Knight_83: -1509211123
+      Meow_Knight_84: 933915766
+      Meow_Knight_85: -431918158
+      Meow_Knight_86: -1121445492
+      Meow_Knight_87: -477949315
+      Meow_Knight_88: 1928470650
+      Meow_Knight_89: -204372942
+      Meow_Knight_9: -1477511290
+      Meow_Knight_90: 594568199
+      Meow_Knight_91: 650113611
+      Meow_Knight_92: -586050443
+      Meow_Knight_93: 1572070633
+      Meow_Knight_94: 1473490390
+      Meow_Knight_95: 2065004303
+      Meow_Knight_96: -1665816691
+      Meow_Knight_97: -1979345624
+      Meow_Knight_98: -1289921436
+      Meow_Knight_99: -333826093
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
