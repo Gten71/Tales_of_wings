@@ -7,7 +7,6 @@ public class ShootButton : MonoBehaviour
 {
     public Button shootButton;
     public CharacterController characterController;
-
     private void Start()
     {
         // Подписываемся на событие нажатия кнопки

@@ -85,7 +85,8 @@ public class CharacterController : MonoBehaviour
         if (bulletComponent != null)
         {
             // Передаем урон снаряда врагу
-            bulletComponent.SetDamage(bulletDamage);
+            bulletComponent.damage = bulletDamage;
+           // bulletComponent.SetDamage(bulletDamage);
         }
 
         currentAmmo--;
