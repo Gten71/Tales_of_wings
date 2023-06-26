@@ -17,6 +17,9 @@ public class CharacterController : MonoBehaviour
 
 
 
+
+
+
     public float moveSpeed = 5f;
     public Joystick joystick;
 
@@ -32,7 +35,10 @@ public class CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentAmmo = maxAmmo;
+
+   
     }
+
 
     private void Update()
     {
@@ -57,6 +63,7 @@ public class CharacterController : MonoBehaviour
             FlipCharacter();
         }
     }
+
 
     private void FlipCharacter()
     {
@@ -86,22 +93,42 @@ public class CharacterController : MonoBehaviour
     public void Shoot()
     {
         // Создаем снаряд и задаем ему направление и скорость
+        // GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        // Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+        // bulletRigidbody.velocity = firePoint.right * bulletSpeed;
+        //   Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        if (target != null)
+        {
+            Vector2 direction = target.position - transform.position;
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+
+        // Создание снаряда в точке FirePoint
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-        bulletRigidbody.velocity = firePoint.right * bulletSpeed;
-     //   Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        // Направление движения снаряда - от FirePoint к врагу
+        if (target != null)
+        {
+            Vector2 direction = target.position - firePoint.position;
+            bulletRigidbody.velocity = direction.normalized * bulletSpeed;
+        }
+
 
         Bullet bulletComponent = bullet.GetComponent<Bullet>();
         if (bulletComponent != null)
         {
             // Передаем урон снаряда врагу
             bulletComponent.damage = bulletDamage;
-           // bulletComponent.SetDamage(bulletDamage);
+            // bulletComponent.SetDamage(bulletDamage);
         }
 
         currentAmmo--;
     }
-    
+
+
 
 }
 
