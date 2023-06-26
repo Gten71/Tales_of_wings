@@ -1,21 +1,19 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public Transform target; // Ссылка на объект-врага
+    public string enemyTag = "Enemy"; // Тег врага
     public GameObject bulletPrefab; // Префаб снаряда
     public Transform firePoint; // Точка, откуда будет выпущен снаряд
     public float bulletSpeed = 10f; // Скорость снаряда
     public int bulletDamage = 50;
     public int maxAmmo = 5;
     private int currentAmmo;
-    private bool isShooting = false;
     public int maxHealth = 100;
     public int currentHealth;
-
 
     public float moveSpeed = 5f;
     public Joystick joystick;
@@ -27,16 +25,15 @@ public class CharacterController : MonoBehaviour
     public Animator animator;
     private Vector2 direction;
 
+    private Transform target; // Ссылка на текущего врага
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentAmmo = maxAmmo;
         currentHealth = maxHealth;
-
-
     }
-
 
     private void Update()
     {
@@ -45,12 +42,14 @@ public class CharacterController : MonoBehaviour
 
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
         rb.velocity = movement * moveSpeed;
+
         //анимации
         direction.x = movement.x;
         direction.y = movement.y;
         animator.SetFloat("Horizontal", direction.x);
         animator.SetFloat("Vertical", direction.y);
         animator.SetFloat("Speed", direction.sqrMagnitude);
+
         // Изменение направления при повороте джойстика влево
         if (horizontalInput < 0 && isFacingRight)
         {
@@ -61,16 +60,18 @@ public class CharacterController : MonoBehaviour
             FlipCharacter();
         }
 
+        // Проверяем, есть ли ближайший враг в зоне видимости
+        FindNearestEnemy();
 
+        // Направляем снаряды на врага, но не поворачиваем персонажа
+        LookAtTarget();
     }
-
 
     private void FlipCharacter()
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
     }
-
 
     public bool HasAmmo()
     {
@@ -93,51 +94,10 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-
-
-
-
-    //public void Shoot()
-    //{
-    //    // Создаем снаряд и задаем ему направление и скорость
-    //    // GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    //    // Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-    //    // bulletRigidbody.velocity = firePoint.right * bulletSpeed;
-    //    //   Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
-    //    if (target != null)
-    //    {
-    //        Vector2 direction = target.position - transform.position;
-    //        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-    //        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    //    }
-
-    //    // Создание снаряда в точке FirePoint
-    //    GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    //    Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-
-    //    // Направление движения снаряда - от FirePoint к врагу
-    //    if (target != null)
-    //    {
-    //        Vector2 direction = target.position - firePoint.position;
-    //        bulletRigidbody.velocity = direction.normalized * bulletSpeed;
-    //    }
-
-
-    //    Bullet bulletComponent = bullet.GetComponent<Bullet>();
-    //    if (bulletComponent != null)
-    //    {
-    //        // Передаем урон снаряда врагу
-    //        bulletComponent.damage = bulletDamage;
-    //        // bulletComponent.SetDamage(bulletDamage);
-    //    }
-
-    //    currentAmmo--;
-    //}
     public void Shoot()
     {
         // Проверяем, есть ли враг в зоне видимости
-        if (target != null)
+        if (target != null && HasAmmo())
         {
             // Создаем снаряд и задаем ему направление и скорость
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -153,16 +113,15 @@ public class CharacterController : MonoBehaviour
             {
                 enemy.TakeDamage(bulletDamage);
             }
+
+            currentAmmo--;
         }
-        currentAmmo--;
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Проверяем, является ли столкнувшийся объект врагом с тегом "Enemy"
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag(enemyTag))
         {
             // Устанавливаем врага в качестве текущей цели
             target = other.transform;
@@ -172,12 +131,35 @@ public class CharacterController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         // Проверяем, является ли столкнувшийся объект врагом с тегом "Enemy"
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag(enemyTag))
         {
             // Сбрасываем текущую цель, когда она выходит из зоны видимости
             target = null;
         }
     }
+
+    private void FindNearestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = enemy;
+            }
+        }
+
+        if (nearestEnemy != null)
+        {
+            target = nearestEnemy.transform;
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -187,12 +169,12 @@ public class CharacterController : MonoBehaviour
         {
             Die();
         }
-
-
     }
+
     private void Die()
     {
-
+        // Обработка смерти персонажа
     }
-
 }
+
+
