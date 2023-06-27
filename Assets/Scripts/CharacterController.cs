@@ -15,6 +15,9 @@ public class CharacterController : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    private bool isShooting = false; // Флаг, указывающий, происходит ли стрельба
+    private bool isBulletActive = false; // Флаг, указывающий, активен ли снаряд
+
     public float moveSpeed = 5f;
     public Joystick joystick;
 
@@ -93,6 +96,15 @@ public class CharacterController : MonoBehaviour
             firePoint.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
+    public void StartShooting()
+    {
+        isShooting = true;
+    }
+
+    public void StopShooting()
+    {
+        isShooting = false;
+    }
 
     public void Shoot()
     {
@@ -108,15 +120,51 @@ public class CharacterController : MonoBehaviour
             bulletRigidbody.velocity = direction.normalized * bulletSpeed;
 
             // Передаем урон снаряда врагу через компонент EnemyAI
-            EnemyAI enemy = target.GetComponent<EnemyAI>();
-            if (enemy != null)
-            {
-                enemy.TakeDamage(bulletDamage);
-            }
+            StartCoroutine(DealDamageDelayed(bullet, bulletDamage));
 
             currentAmmo--;
         }
     }
+
+    private IEnumerator DealDamageDelayed(GameObject bullet, int damage)
+    {
+        // Ждем, пока снаряд достигнет цели
+        yield return new WaitUntil(() => bullet == null || !bullet.activeSelf);
+
+        // Если снаряд существует и неактивен (долетел до цели), наносим урон
+        if (bullet != null && !bullet.activeSelf)
+        {
+            EnemyAI enemy = target.GetComponent<EnemyAI>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+        }
+    }
+
+    //public void Shoot()
+    //{
+    //    // Проверяем, есть ли враг в зоне видимости
+    //    if (target != null && HasAmmo())
+    //    {
+    //        // Создаем снаряд и задаем ему направление и скорость
+    //        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    //        Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
+
+    //        // Направление движения снаряда - от FirePoint к врагу
+    //        Vector2 direction = target.position - firePoint.position;
+    //        bulletRigidbody.velocity = direction.normalized * bulletSpeed;
+
+    //        // Передаем урон снаряда врагу через компонент EnemyAI
+    //        EnemyAI enemy = target.GetComponent<EnemyAI>();
+    //        if (enemy != null)
+    //        {
+    //            enemy.TakeDamage(bulletDamage);
+    //        }
+
+    //        currentAmmo--;
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -164,7 +212,6 @@ public class CharacterController : MonoBehaviour
     {
         currentHealth -= damage;
 
-        // Проверка на смерть персонажа
         if (currentHealth <= 0)
         {
             Die();
@@ -173,7 +220,7 @@ public class CharacterController : MonoBehaviour
 
     private void Die()
     {
-        // Обработка смерти персонажа
+        // Вписать логику что будет после смерти персонажа
     }
 }
 
