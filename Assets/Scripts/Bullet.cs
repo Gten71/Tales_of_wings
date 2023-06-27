@@ -17,12 +17,23 @@ public class Bullet : MonoBehaviour
             HealthBar healthBar = collision.gameObject.GetComponentInChildren<HealthBar>();
             if (healthBar != null)
             {
-                healthBar.SetHealth(health.currentHealth);
+                healthBar.SetHealth(health.currentHealth, health.maxHealth);
+            }
+        }
+
+        HealthBoss bossHealth = collision.gameObject.GetComponent<HealthBoss>();
+        if (bossHealth != null)
+        {
+            bossHealth.TakeDamage(damage);
+
+            // Обновите значение полоски здоровья босса
+            HealthBarBoss bossHealthBar = collision.gameObject.GetComponentInChildren<HealthBarBoss>();
+            if (bossHealthBar != null)
+            {
+                bossHealthBar.SetHealth(bossHealth.currentHealth, bossHealth.maxHealth);
             }
         }
 
         Destroy(gameObject);
     }
 }
-
-
