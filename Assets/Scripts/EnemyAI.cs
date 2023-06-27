@@ -44,7 +44,8 @@ public class EnemyAI : MonoBehaviour
     private void MoveTowardsPlayer()
     {
         // Направляем врага на персонажа
-        transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+
     }
 
     private void AttackPlayer()
