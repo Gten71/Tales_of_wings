@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class HealthBoss : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBarBehaviour healthBar;
+    public HealthBarBoss healthBar;
 
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth, maxHealth);
-        healthBar.gameObject.SetActive(false);
     }
 
     public void TakeDamage(int damage)
@@ -29,7 +28,6 @@ public class Health : MonoBehaviour
         {
             // Update the health bar with the new health values
             healthBar.SetHealth(currentHealth, maxHealth);
-            healthBar.gameObject.SetActive(true);
         }
     }
 
@@ -38,6 +36,3 @@ public class Health : MonoBehaviour
         Destroy(gameObject);
     }
 }
-
-
-

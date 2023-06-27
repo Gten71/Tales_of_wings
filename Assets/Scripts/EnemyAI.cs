@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     private Transform target;
     private bool isAttacking = false;
     private Health enemyHealth;
+    private HealthBarBehaviour enemyHealthBar;
 
     private void Start()
     {
@@ -58,9 +59,11 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+
     public void TakeDamage(int damage)
     {
         // Враг получает урон
+
         enemyHealth.TakeDamage(damage);
     }
 

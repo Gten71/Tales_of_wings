@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthBarUI : MonoBehaviour
 {
     public Slider healthSlider; // —сылка на компонент Slider, отображающий полоску здоровь€
-    public CharacterController characterController; // —сылка на скрипт CharacterController персонажа
+    public CharacterController characterController; // —сылка на скрипт CharacterController персонажа 
 
     private void Start()
     {
