@@ -59,6 +59,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+
     public void TakeDamage(int damage)
     {
         // Враг получает урон
