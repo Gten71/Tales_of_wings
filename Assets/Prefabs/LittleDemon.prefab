@@ -66,15 +66,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -857551664, guid: 9fd644917d2a088419db34a46f8ea402, type: 3}
+  m_Sprite: {fileID: -1753811279, guid: 49f98842beb8b894a8494865a22a6adc, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2428652689222951219
 GameObject:
@@ -220,7 +220,7 @@ RectTransform:
   m_GameObject: {fileID: 3105824671041025558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3943285844914165519}
@@ -230,8 +230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10.100037, y: -232}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 0.000024796, y: -233}
+  m_SizeDelta: {x: 119.3752, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7545637715420319040
 MonoBehaviour:
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 227755145, guid: 9fd644917d2a088419db34a46f8ea402, type: 3}
+  m_Sprite: {fileID: 196000243, guid: 49f98842beb8b894a8494865a22a6adc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -394,8 +394,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0.020301819, y: 0}
-  m_SizeDelta: {x: -19.9158, y: -4.6848}
+  m_AnchoredPosition: {x: -0.1943016, y: 0}
+  m_SizeDelta: {x: -14.552, y: -4.6848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7951777627466152334
 GameObject:
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 122654858524657203}
   - component: {fileID: 5716374511894805347}
   - component: {fileID: 4450592776772572009}
-  - component: {fileID: 7817446188109615223}
+  - component: {fileID: 2143043878959168497}
   m_Layer: 0
   m_Name: LittleDemon
   m_TagString: Enemy
@@ -658,7 +658,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!195 &7817446188109615223
+--- !u!195 &2143043878959168497
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

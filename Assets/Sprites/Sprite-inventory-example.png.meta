@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 68bb29edd773901439fca5dd2950cbee
+guid: 4167b6f4b18ee724d8b655c3aa7fa4b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 20
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -132,17 +132,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_Health_Temp_0
+      name: Sprite-inventory-example_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 21
-        width: 64
-        height: 16
+        x: 10
+        y: 24
+        width: 108
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06a5fdec9dffff3419f27c8d2334a902
-      internalID: 98142038
+      spriteID: f3d508d84adcb7542abb0f992eb0afbf
+      internalID: 1025291543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_Health_Temp_1
+      name: Sprite-inventory-example_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 64
-        height: 16
+        x: 134
+        y: 11
+        width: 116
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,29 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1930cd4ec960d684d9c6629806565f0f
-      internalID: -1063120784
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_Health_Temp_2
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 43
-        width: 42
-        height: 2
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dab09063d005f57498b36e453fbf0e75
-      internalID: -1599187798
+      spriteID: 50803c7694f7d5043a252f678d6fa7d3
+      internalID: 731337367
       vertices: []
       indices: 
       edges: []
@@ -209,9 +201,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Boss_Health_Temp_0: 98142038
-      Boss_Health_Temp_1: -1063120784
-      Boss_Health_Temp_2: -1599187798
+      Sprite-inventory-example_0: 1025291543
+      Sprite-inventory-example_1: 731337367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
