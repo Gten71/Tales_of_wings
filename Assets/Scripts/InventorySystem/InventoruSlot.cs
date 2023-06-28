@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using static UnityEditor.Progress;
 
 public class InventoruSlot : MonoBehaviour
 {
@@ -12,6 +11,7 @@ public class InventoruSlot : MonoBehaviour
     Image icon;
     Button btn;
     TextMeshProUGUI current;
+
     private void Start()
     {
         icon = gameObject.transform.GetChild(0).GetComponent<Image>();
@@ -26,15 +26,28 @@ public class InventoruSlot : MonoBehaviour
         SlotItem = item;
         objItem = obj;
         icon.enabled = true;
-        if (item.CurrI == 0 || item.CurrI == 1)
+
+        if (item.stackSize <= 1)
         {
             current.enabled = false;
         }
         else
         {
-            
             current.enabled = true;
-            current.text = item.CurrI.ToString();
+            current.text = item.stackSize.ToString();
+        }
+    }
+
+    public void AddToSlot(Item item, GameObject obj)
+    {
+        if (SlotItem != null && SlotItem.Name == item.Name)
+        {
+            SlotItem.stackSize += item.CurrP; // Изменяем значение stackSize на значение CurrP
+            current.text = SlotItem.stackSize.ToString(); // Обновляем отображение количества предметов в стаке
+        }
+        else
+        {
+            PutInSlot(item, obj);
         }
     }
 
@@ -49,22 +62,26 @@ public class InventoruSlot : MonoBehaviour
             ItemInfo.Instance.Close();
         }
     }
+
     public void ClearSlot()
     {
-        SlotItem.CurrI--;
-        if (SlotItem.CurrI == 0)
+        if (SlotItem != null)
         {
-            SlotItem = null;
-            objItem = null;
-            icon.sprite = null;
-            icon.enabled = false;
-            current = null;
-            current.enabled = false;
-        }
-        else
-        {
-            PutInSlot(SlotItem,objItem);
+            SlotItem.stackSize--;
+
+            if (SlotItem.stackSize <= 0)
+            {
+                SlotItem = null;
+                objItem = null;
+                icon.sprite = null;
+                icon.enabled = false;
+                current = null;
+                current.enabled = false;
+            }
+            else
+            {
+                current.text = SlotItem.stackSize.ToString(); // Обновляем отображение количества предметов в стаке
+            }
         }
     }
 }
-

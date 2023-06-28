@@ -16,6 +16,7 @@ MonoBehaviour:
   Description: Healing u brain
   icon: {fileID: -1997889174, guid: 5a6a082108f8c6d49ae3755e79b5be58, type: 3}
   CurrP: 1
+  stackSize: 0
   CurrI: 0
   CurrMax: 3
   isHealing: 1

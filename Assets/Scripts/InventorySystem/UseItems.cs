@@ -5,16 +5,19 @@ using UnityEngine;
 public class UseItems : MonoBehaviour
 {
     public static UseItems instance;
+    public CharacterController player; // Reference to the player script
+
     private void Start()
     {
         instance = this;
+        player = CharacterController.Instance;
     }
 
     public void UseHealPosion(Item item)
     {
         if (item.isHealing)
         {
-            Debug.Log("Отхилило-" + item.PowerHealing);
+            player.Heal(item.PowerHealing); // Increase player's health
         }
     }
 }

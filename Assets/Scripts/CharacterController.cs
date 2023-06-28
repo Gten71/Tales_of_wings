@@ -210,10 +210,23 @@ public class CharacterController : MonoBehaviour
             target = nearestEnemy.transform;
         }
     }
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
 
         if (currentHealth <= 0)
         {

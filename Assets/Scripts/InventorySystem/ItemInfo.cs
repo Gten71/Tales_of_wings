@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using static UnityEditor.Progress;
 
 public class ItemInfo : MonoBehaviour
 {
@@ -14,13 +13,11 @@ public class ItemInfo : MonoBehaviour
     private TextMeshProUGUI Description;
     private Button Use;
     private Button Delete;
-    private Item itemInf;
-
-    public InventoruSlot Slot;
-
     private Button Drop;
+    private Item itemInf;
     private GameObject itemObj;
     private InventoruSlot cerSlot;
+
     private void Start()
     {
         Instance = this;
@@ -33,6 +30,8 @@ public class ItemInfo : MonoBehaviour
         Drop = transform.GetChild(6).GetComponent<Button>();
 
         Use.onClick.AddListener(UseItem);
+        Delete.onClick.AddListener(DeleteItem);
+        Drop.onClick.AddListener(DropItem);
     }
 
     public void ChangeInfo(Item item)
@@ -44,12 +43,27 @@ public class ItemInfo : MonoBehaviour
 
     public void UseItem()
     {
-        UseItems.instance.UseHealPosion(itemInf);
-       
-           cerSlot.ClearSlot();
-            Close();
+        if (cerSlot != null) // Проверяем, что слот с предметом не является null
+        {
+            if (itemInf.CurrI > 0) // Проверяем, что у предмета в стаке есть доступные единицы
+            {
+                UseItems.instance.UseHealPosion(itemInf);
 
+                itemInf.CurrI--; // Уменьшаем количество предметов в стаке
+
+                if (itemInf.CurrI <= 0)
+                {
+                    cerSlot.ClearSlot();
+                    Close();
+                }
+                else
+                {
+                    cerSlot.PutInSlot(itemInf, itemObj); // Обновляем отображение слота с учетом нового количества предметов в стаке
+                }
+            }
+        }
     }
+
 
     public void DropItem()
     {
@@ -57,14 +71,15 @@ public class ItemInfo : MonoBehaviour
         itemObj.SetActive(true);
         itemObj.transform.position = droppos;
         cerSlot.ClearSlot();
-            Close();
+        Close();
     }
 
     public void DeleteItem()
     {
-            cerSlot.ClearSlot();
-            Close();
+        cerSlot.ClearSlot();
+        Close();
     }
+
     public void Open(Item item, GameObject obj, InventoruSlot currentSlot)
     {
         ChangeInfo(item);
@@ -72,11 +87,10 @@ public class ItemInfo : MonoBehaviour
         itemObj = obj;
         cerSlot = currentSlot;
         gameObject.transform.localScale = Vector3.one;
-
     }
+
     public void Close()
     {
         gameObject.transform.localScale = Vector3.zero;
     }
 }
-

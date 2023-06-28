@@ -1,54 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
     public Transform slotParent;
-    private ItemInfo inf;
-    private InventoruSlot[] inventoruSlots = new InventoruSlot[12];
+    private InventoruSlot[] inventoruSlots;
+
     private void Start()
     {
         Instance = this;
-        for (int i = 0; i < inventoruSlots.Length; i++)
-        {
-            inventoruSlots[i] = slotParent.GetChild(i).GetComponent<InventoruSlot>();
-        }
+        inventoruSlots = slotParent.GetComponentsInChildren<InventoruSlot>();
     }
 
-    public void PutInEmpteySlot(Item item, GameObject obj)
+    public void PutInEmptySlot(Item item, GameObject obj)
     {
         for (int i = 0; i < inventoruSlots.Length; i++)
         {
-
-            if(inventoruSlots[i].SlotItem == item)
+            if (inventoruSlots[i].SlotItem == item)
             {
-                if (item.CurrMax != item.CurrI)
+                if (item.CurrMax > item.CurrI)
                 {
-                    item.CurrI += item.CurrP;
-                    return;
+                    item.CurrI++; // Увеличиваем количество предметов в стаке
+                    inventoruSlots[i].AddToSlot(item, obj); // Добавляем предмет в слот и обновляем отображение
                 }
                 return;
             }
 
-            if(inventoruSlots[i].SlotItem == null)
+            if (inventoruSlots[i].SlotItem == null)
             {
                 item.CurrI = 1;
                 inventoruSlots[i].PutInSlot(item, obj);
                 return;
             }
-            
-           
         }
     }
+
+
+
 
     public void Open()
     {
         gameObject.transform.localScale = Vector3.one;
-        
     }
+
     public void Close()
     {
         gameObject.transform.localScale = Vector3.zero;
