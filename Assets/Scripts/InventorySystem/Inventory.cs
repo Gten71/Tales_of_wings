@@ -18,38 +18,26 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < inventoruSlots.Length; i++)
         {
-            if (inventoruSlots[i].SlotItem == item)
+            InventoruSlot slot = inventoruSlots[i];
+            if (slot.SlotItem != null && slot.SlotItem == item && slot.SlotItem.CurrI < slot.SlotItem.CurrMax)
             {
-                if (item.CurrMax != item.CurrI)
-                {
-                    item.CurrI += item.CurrP;
-                    return;
-                }
+                slot.SlotItem.CurrI += item.CurrP;
+                if (slot.SlotItem.CurrI > slot.SlotItem.CurrMax)
+                    slot.SlotItem.CurrI = slot.SlotItem.CurrMax;
+                slot.PutInSlot(slot.SlotItem, obj);
                 return;
             }
 
-            if (inventoruSlots[i].SlotItem == null)
+            if (slot.SlotItem == null)
             {
-                item.CurrI = 1;
-                inventoruSlots[i].PutInSlot(item, obj);
+                item.CurrI = item.CurrP;
+                slot.PutInSlot(item, obj);
                 return;
             }
         }
     }
-    //public void PutInEmptySlot(Item item, GameObject obj)
-    //{
-    //    for (int i = 0; i < inventoruSlots.Length; i++)
-    //    {
-    //        if (inventoruSlots[i].SlotItem == null)
-    //        {
-    //            inventoruSlots[i].PutInSlot(item, obj);
-    //            return;
-    //        }
-    //    }
 
-    //    // Если все слоты заняты, отбросить предмет
-    //    // Можно добавить здесь логику создания префаба "отброшенного предмета"
-    //}
+
 
     public void Open()
     {

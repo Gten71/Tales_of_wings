@@ -12,11 +12,13 @@ public class EnemyAI : MonoBehaviour
     private bool isAttacking = false;
     private Health enemyHealth;
     private HealthBarBehaviour enemyHealthBar;
+    private Rigidbody2D rb;
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
-        enemyHealth = GetComponent<Health>(); // Получаем компонент Health врага
+        enemyHealth = GetComponent<Health>();
+        rb = GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     private void Update()
@@ -42,16 +44,17 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+
     private void MoveTowardsPlayer()
     {
-        // Направляем врага на персонажа
+        if (target != null)
+        {
             transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
-
+        }
     }
 
     private void AttackPlayer()
     {
-        // Наносим урон персонажу
         CharacterController healthController = target.GetComponent<CharacterController>();
         if (healthController != null)
         {
@@ -59,15 +62,26 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-
     public void TakeDamage(int damage)
     {
-        // Враг получает урон
-
         enemyHealth.TakeDamage(damage);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            target = collision.transform;
+            isAttacking = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            target = null;
+            isAttacking = false;
+        }
+    }
 }
-
-
-
