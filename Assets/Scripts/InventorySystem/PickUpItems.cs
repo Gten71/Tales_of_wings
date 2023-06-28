@@ -17,8 +17,7 @@ public class PickUpItems : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            Inventory.Instance.PutInEmptySlot(item, itemObj);
+            Inventory.Instance.PutInEmpteySlot(item, itemObj);
         }
     }
-
 }

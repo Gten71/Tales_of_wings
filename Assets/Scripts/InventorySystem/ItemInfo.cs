@@ -43,27 +43,11 @@ public class ItemInfo : MonoBehaviour
 
     public void UseItem()
     {
-        if (cerSlot != null) // Проверяем, что слот с предметом не является null
-        {
-            if (itemInf.CurrI > 0) // Проверяем, что у предмета в стаке есть доступные единицы
-            {
-                UseItems.instance.UseHealPosion(itemInf);
+        UseItems.instance.UseHealPosion(itemInf);
 
-                itemInf.CurrI--; // Уменьшаем количество предметов в стаке
-
-                if (itemInf.CurrI <= 0)
-                {
-                    cerSlot.ClearSlot();
-                    Close();
-                }
-                else
-                {
-                    cerSlot.PutInSlot(itemInf, itemObj); // Обновляем отображение слота с учетом нового количества предметов в стаке
-                }
-            }
-        }
+        cerSlot.ClearSlot();
+        Close();
     }
-
 
     public void DropItem()
     {
