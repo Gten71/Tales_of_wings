@@ -17,7 +17,7 @@ public class UseItems : MonoBehaviour
     {
         if (item.isHealing)
         {
-            player.Heal(item.PowerHealing); // Increase player's health
+            player.Heal(item.PowerHealing); // Проверьте, что метод Heal() правильно работает
         }
     }
 }

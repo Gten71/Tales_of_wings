@@ -20,6 +20,23 @@ public class InventoruSlot : MonoBehaviour
         current = gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
     }
 
+    //public void PutInSlot(Item item, GameObject obj)
+    //{
+    //    icon.sprite = item.icon;
+    //    SlotItem = item;
+    //    objItem = obj;
+    //    icon.enabled = true;
+
+    //    if (item.CurrI == 0 || item.CurrI == 1)
+    //    {
+    //        current.enabled = false;
+    //    }
+    //    else
+    //    {
+    //        current.enabled = true;
+    //        current.text = item.CurrI.ToString();
+    //    }
+    //}
     public void PutInSlot(Item item, GameObject obj)
     {
         icon.sprite = item.icon;
@@ -37,6 +54,7 @@ public class InventoruSlot : MonoBehaviour
             current.text = item.CurrI.ToString();
         }
     }
+
 
     void SlotClicked()
     {
@@ -56,16 +74,19 @@ public class InventoruSlot : MonoBehaviour
 
         if (SlotItem.CurrI <= 0)
         {
+            SlotItem.CurrI = 0;
             SlotItem = null;
             objItem = null;
             icon.sprite = null;
             icon.enabled = false;
-            current = null;
-            current.enabled = false;
+            if (current != null)
+                current.enabled = false;
         }
         else
         {
-            PutInSlot(SlotItem, objItem);
+            current.text = SlotItem.CurrI.ToString();
         }
     }
+
+
 }
