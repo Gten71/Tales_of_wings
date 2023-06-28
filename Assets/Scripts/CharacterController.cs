@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
+    public static CharacterController Instance;
+
     public string enemyTag = "Enemy"; // Тег врага
     public GameObject bulletPrefab; // Префаб снаряда
     public Transform firePoint; // Точка, откуда будет выпущен снаряд
@@ -32,6 +34,7 @@ public class CharacterController : MonoBehaviour
 
     private void Start()
     {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentAmmo = maxAmmo;
