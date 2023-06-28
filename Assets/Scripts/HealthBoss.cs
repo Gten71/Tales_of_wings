@@ -8,6 +8,7 @@ public class HealthBoss : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBarBoss healthBar;
+    public GameObject itemPrefab;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class HealthBoss : MonoBehaviour
 
     private void Die()
     {
+        GameObject itemObj = Instantiate(itemPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

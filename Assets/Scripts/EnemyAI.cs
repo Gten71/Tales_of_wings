@@ -67,11 +67,6 @@ public class EnemyAI : MonoBehaviour
         enemyHealth.TakeDamage(damage);
     }
 
-    private void Die()
-    {
-        // Обработка смерти врага
-        Destroy(gameObject);
-    }
 }
 
 

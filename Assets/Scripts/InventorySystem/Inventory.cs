@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
         inventoruSlots = slotParent.GetComponentsInChildren<InventoruSlot>();
     }
 
-    public void PutInEmpteySlot(Item item, GameObject obj)
+    public void PutInEmptySlot(Item item, GameObject obj)
     {
         for (int i = 0; i < inventoruSlots.Length; i++)
         {
@@ -36,6 +36,20 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+    //public void PutInEmptySlot(Item item, GameObject obj)
+    //{
+    //    for (int i = 0; i < inventoruSlots.Length; i++)
+    //    {
+    //        if (inventoruSlots[i].SlotItem == null)
+    //        {
+    //            inventoruSlots[i].PutInSlot(item, obj);
+    //            return;
+    //        }
+    //    }
+
+    //    // Если все слоты заняты, отбросить предмет
+    //    // Можно добавить здесь логику создания префаба "отброшенного предмета"
+    //}
 
     public void Open()
     {

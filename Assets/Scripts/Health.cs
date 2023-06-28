@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBarBehaviour healthBar;
+    public GameObject itemPrefab;
 
     private void Start()
     {
@@ -35,6 +36,8 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        GameObject itemObj = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+
         Destroy(gameObject);
     }
 }
