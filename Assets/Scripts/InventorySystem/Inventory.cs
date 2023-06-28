@@ -14,16 +14,16 @@ public class Inventory : MonoBehaviour
         inventoruSlots = slotParent.GetComponentsInChildren<InventoruSlot>();
     }
 
-    public void PutInEmptySlot(Item item, GameObject obj)
+    public void PutInEmpteySlot(Item item, GameObject obj)
     {
         for (int i = 0; i < inventoruSlots.Length; i++)
         {
             if (inventoruSlots[i].SlotItem == item)
             {
-                if (item.CurrMax > item.CurrI)
+                if (item.CurrMax != item.CurrI)
                 {
-                    item.CurrI++; // Увеличиваем количество предметов в стаке
-                    inventoruSlots[i].AddToSlot(item, obj); // Добавляем предмет в слот и обновляем отображение
+                    item.CurrI += item.CurrP;
+                    return;
                 }
                 return;
             }
@@ -36,9 +36,6 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
-
-
 
     public void Open()
     {
