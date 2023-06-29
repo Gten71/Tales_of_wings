@@ -10,7 +10,7 @@ public class Item : ScriptableObject
     public string Description = "Описание предмета";
     public Sprite icon = null;
     public int CurrP;
-    public int CurrI;
+    public float CurrI;
     public int CurrMax;
     public bool isHealing;
     public int PowerHealing;

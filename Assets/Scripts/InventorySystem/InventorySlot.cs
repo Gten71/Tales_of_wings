@@ -70,7 +70,7 @@ public class InventorySlot : MonoBehaviour
 
     public void ClearSlot()
     {
-        SlotItem.CurrI--;
+        SlotItem.CurrI -= 0.5f;
 
         if (SlotItem.CurrI <= 0)
         {
@@ -87,6 +87,7 @@ public class InventorySlot : MonoBehaviour
             current.text = SlotItem.CurrI.ToString();
         }
     }
+
 
 
 }
