@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public int damage = 50;
+    public int damage;
+    public float destroyDelay; // ¬рем€ задержки перед уничтожением снар€да
+
+    private void Start()
+    {
+        // «апускаем отсчет времени перед уничтожением снар€да
+        StartCoroutine(DestroyAfterDelayCoroutine());
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -34,6 +41,15 @@ public class Bullet : MonoBehaviour
             }
         }
 
+        // ≈сли снар€д попал во что-то, уничтожаем его немедленно
+        Destroy(gameObject);
+    }
+
+    private IEnumerator DestroyAfterDelayCoroutine()
+    {
+        yield return new WaitForSeconds(destroyDelay);
+
+        // ”ничтожаем снар€д после указанного времени
         Destroy(gameObject);
     }
 }

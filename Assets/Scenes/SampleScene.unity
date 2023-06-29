@@ -507,6 +507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossDemon
       objectReference: {fileID: 0}
+    - target: {fileID: 7237152461951939757, guid: c1ee96633d62d9e43bd1a6f1ceefd9c3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8179786968310871003, guid: c1ee96633d62d9e43bd1a6f1ceefd9c3, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1480,7 +1484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTag: Enemy
-  bulletPrefab: {fileID: 1490245679}
+  bulletPrefab: {fileID: 3311990072515883742, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
   firePoint: {fileID: 2083038481}
   bulletSpeed: 10
   bulletDamage: 50
@@ -2297,7 +2301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07886004, y: 0.042000003}
   m_AnchorMax: {x: 0.9235038, y: 0.79176646}
-  m_AnchoredPosition: {x: -0.6203003, y: 7}
+  m_AnchoredPosition: {x: -0.6203003, y: 0}
   m_SizeDelta: {x: -18.812, y: -29.2554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669316817
@@ -114622,7 +114626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 462, y: -63}
+  m_AnchoredPosition: {x: 441.14, y: -57.04}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279038803
@@ -116071,45 +116075,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2891075582115361269, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: m_Size.x
-      value: 0.56910706
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891075582115361269, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: m_Size.y
-      value: 0.2565118
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891075582115361269, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.0004119873
-      objectReference: {fileID: 0}
-    - target: {fileID: 2891075582115361269, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.0010109544
-      objectReference: {fileID: 0}
     - target: {fileID: 3311990072515883742, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
       propertyPath: m_Name
       value: Arrow
       objectReference: {fileID: 0}
-    - target: {fileID: 3311990072515883742, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6047043746564772512, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: damage
-      value: 50
+      propertyPath: destroyDelay
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8596325546507464952, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8596325546507464952, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8596325546507464952, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8596325546507464952, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
       propertyPath: m_LocalPosition.x
@@ -116156,11 +116132,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
---- !u!1 &1490245679 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3311990072515883742, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
-  m_PrefabInstance: {fileID: 1490245678}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1503064226
 GameObject:
   m_ObjectHideFlags: 0
@@ -137926,7 +137897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5521782292185485649, guid: 3b89807f62bba3940b80009a1b5fa644, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -21.2
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 5617240346771862561, guid: 3b89807f62bba3940b80009a1b5fa644, type: 3}
       propertyPath: m_RootOrder
@@ -137938,7 +137909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5617240346771862561, guid: 3b89807f62bba3940b80009a1b5fa644, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.20410895
+      value: -18.05
       objectReference: {fileID: 0}
     - target: {fileID: 5617240346771862561, guid: 3b89807f62bba3940b80009a1b5fa644, type: 3}
       propertyPath: m_LocalPosition.z
@@ -139129,8 +139100,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5531113, y: 0.14038171}
   m_AnchorMax: {x: 0.9761453, y: 0.7995773}
-  m_AnchoredPosition: {x: -71.564026, y: 18.630997}
-  m_SizeDelta: {x: 59.0603, y: 120.37}
+  m_AnchoredPosition: {x: -65.097084, y: 0}
+  m_SizeDelta: {x: 71.99417, y: 120.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2135797853
 GameObject:
