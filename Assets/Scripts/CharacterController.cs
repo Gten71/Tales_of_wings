@@ -16,6 +16,8 @@ public class CharacterController : MonoBehaviour
     private int currentAmmo;
     public int maxHealth = 100;
     public int currentHealth;
+    public Collider2D shootingArea;
+
 
     private bool isShooting = false; // ‘лаг, указывающий, происходит ли стрельба
     private bool isBulletActive = false; // ‘лаг, указывающий, активен ли снар€д
@@ -30,7 +32,7 @@ public class CharacterController : MonoBehaviour
     public Animator animator;
     private Vector2 direction;
 
-    private Transform target; // —сылка на текущего врага
+    public Transform target; // —сылка на текущего врага
 
     private void Start()
     {

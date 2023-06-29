@@ -15,13 +15,12 @@ public class ShootButton : MonoBehaviour
 
     private void OnShootButtonClick()
     {
-        if (characterController.HasAmmo())
+        if (characterController.HasAmmo() && characterController.target != null && characterController.shootingArea.OverlapPoint(characterController.target.position))
         {
             characterController.Shoot();
-         //   characterController.LookAtTarget();
+            characterController.LookAtTarget();
         }
-        // Вызываем стрельбу у персонажа
-        
     }
+
 }
 

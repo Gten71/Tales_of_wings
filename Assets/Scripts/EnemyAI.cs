@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -13,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     private Health enemyHealth;
     private HealthBarBehaviour enemyHealthBar;
     private Rigidbody2D rb;
+
+    private bool isMirrored = false; // Флаг, указывающий, нужно ли зеркально отражать врага
 
     private void Start()
     {
@@ -48,11 +48,20 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-
     private void MoveTowardsPlayer()
     {
         if (target != null)
         {
+            Vector3 direction = target.position - transform.position;
+            if (direction.x > 0 && isMirrored)
+            {
+                FlipCharacter();
+            }
+            else if (direction.x < 0 && !isMirrored)
+            {
+                FlipCharacter();
+            }
+
             transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
         }
     }
@@ -87,5 +96,11 @@ public class EnemyAI : MonoBehaviour
             target = null;
             isAttacking = false;
         }
+    }
+
+    private void FlipCharacter()
+    {
+        isMirrored = !isMirrored;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
