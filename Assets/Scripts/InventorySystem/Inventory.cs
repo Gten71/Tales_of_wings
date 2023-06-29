@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         Instance = this;
+        Instance = this;
         inventorySlots = slotParent.GetComponentsInChildren<InventorySlot>();
     }
 
@@ -21,7 +22,7 @@ public class Inventory : MonoBehaviour
             InventorySlot slot = inventorySlots[i];
             if (slot.SlotItem != null && slot.SlotItem == item && slot.SlotItem.CurrI < slot.SlotItem.CurrMax)
             {
-                slot.SlotItem.CurrI += item.CurrP;
+                slot.SlotItem.CurrI += 1; 
                 if (slot.SlotItem.CurrI > slot.SlotItem.CurrMax)
                     slot.SlotItem.CurrI = slot.SlotItem.CurrMax;
                 slot.PutInSlot(slot.SlotItem, obj);
@@ -30,12 +31,13 @@ public class Inventory : MonoBehaviour
 
             if (slot.SlotItem == null)
             {
-                item.CurrI = item.CurrP;
+                item.CurrI = 1; 
                 slot.PutInSlot(item, obj);
                 return;
             }
         }
     }
+
 
 
 
