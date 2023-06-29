@@ -2,6 +2,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -238,7 +239,7 @@ public class CharacterController : MonoBehaviour
 
     private void Die()
     {
-        // ¬писать логику что будет после смерти персонажа
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
 
