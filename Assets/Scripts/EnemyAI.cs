@@ -55,11 +55,11 @@ public class EnemyAI : MonoBehaviour
             Vector3 direction = target.position - transform.position;
             if (direction.x > 0 && isMirrored)
             {
-                FlipCharacter();
+                FlipEnemy();
             }
             else if (direction.x < 0 && !isMirrored)
             {
-                FlipCharacter();
+                FlipEnemy();
             }
 
             transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
@@ -98,7 +98,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void FlipCharacter()
+    private void FlipEnemy()
     {
         isMirrored = !isMirrored;
         transform.Rotate(0f, 180f, 0f);

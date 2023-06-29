@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class InventoruSlot : MonoBehaviour
+public class InventorySlot : MonoBehaviour
 {
     public Item SlotItem;
     public GameObject objItem;
