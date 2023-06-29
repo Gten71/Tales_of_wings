@@ -16,7 +16,7 @@ public class ItemInfo : MonoBehaviour
     private Button Drop;
     private Item itemInf;
     private GameObject itemObj;
-    private InventoruSlot cerSlot;
+    private InventorySlot cerSlot;
 
     private void Start()
     {
@@ -64,7 +64,7 @@ public class ItemInfo : MonoBehaviour
         Close();
     }
 
-    public void Open(Item item, GameObject obj, InventoruSlot currentSlot)
+    public void Open(Item item, GameObject obj, InventorySlot currentSlot)
     {
         ChangeInfo(item);
         itemInf = item;

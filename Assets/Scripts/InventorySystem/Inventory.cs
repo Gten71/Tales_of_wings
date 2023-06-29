@@ -6,19 +6,19 @@ public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
     public Transform slotParent;
-    private InventoruSlot[] inventoruSlots;
+    private InventorySlot[] inventorySlots;
 
     private void Start()
     {
         Instance = this;
-        inventoruSlots = slotParent.GetComponentsInChildren<InventoruSlot>();
+        inventorySlots = slotParent.GetComponentsInChildren<InventorySlot>();
     }
 
     public void PutInEmptySlot(Item item, GameObject obj)
     {
-        for (int i = 0; i < inventoruSlots.Length; i++)
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
-            InventoruSlot slot = inventoruSlots[i];
+            InventorySlot slot = inventorySlots[i];
             if (slot.SlotItem != null && slot.SlotItem == item && slot.SlotItem.CurrI < slot.SlotItem.CurrMax)
             {
                 slot.SlotItem.CurrI += item.CurrP;
