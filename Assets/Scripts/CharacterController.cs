@@ -219,7 +219,7 @@ public class CharacterController : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
-
+                                                                                        
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

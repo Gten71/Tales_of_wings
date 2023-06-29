@@ -23,24 +23,28 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        // Проверяем расстояние между врагом и персонажем
-        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+        // Проверяем, есть ли текущий враг и персонаж
+        if (target != null && transform != null)
+        {
+            // Проверяем расстояние между врагом и персонажем
+            float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-        if (distanceToTarget <= attackRange)
-        {
-            // Враг находится в пределах атаки
-            if (!isAttacking)
+            if (distanceToTarget <= attackRange)
             {
-                // Начинаем атаку
-                isAttacking = true;
-                AttackPlayer();
+                // Враг находится в пределах атаки
+                if (!isAttacking)
+                {
+                    // Начинаем атаку
+                    isAttacking = true;
+                    AttackPlayer();
+                }
             }
-        }
-        else
-        {
-            // Враг должен приблизиться к персонажу
-            isAttacking = false;
-            MoveTowardsPlayer();
+            else
+            {
+                // Враг должен приблизиться к персонажу
+                isAttacking = false;
+                MoveTowardsPlayer();
+            }
         }
     }
 
