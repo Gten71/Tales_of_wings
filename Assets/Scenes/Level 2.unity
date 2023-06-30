@@ -40737,7 +40737,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   shootingArea: {fileID: 156819941}
-  ammoRegenerationRate: 0
+  ammoRegenerationRate: 0.5
   moveSpeed: 5
   joystick: {fileID: 1112695003}
   animator: {fileID: 1910182838}
