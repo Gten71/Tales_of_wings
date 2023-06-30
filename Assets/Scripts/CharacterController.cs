@@ -259,10 +259,40 @@ public class CharacterController : MonoBehaviour
         {
             Die();
         }
+            // ѕроигрываем анимацию выстрела
+            animator.SetBool("TakeDamage", true);
+
+            // «апускаем корутину дл€ переключени€ на анимацию "Idle" после проигрывани€ анимации выстрела
+            StartCoroutine(PlayIdleAfterDamage());
+
+    }
+    private IEnumerator PlayIdleAfterDamage()
+    {
+        // ∆дем, пока проиграетс€ анимаци€ выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // ѕроигрываем анимацию "Idle"
+        animator.SetBool("TakeDamage", false);
+
     }
 
     private void Die()
     {
+
+            // ѕроигрываем анимацию выстрела
+            animator.SetBool("Life", false);
+
+            // «апускаем корутину дл€ переключени€ на анимацию "Idle" после проигрывани€ анимации выстрела
+            StartCoroutine(PlayIdleAfterDie());
+       
+    }
+    private IEnumerator PlayIdleAfterDie()
+    {
+        // ∆дем, пока проиграетс€ анимаци€ выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // ѕроигрываем анимацию "Idle"
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
