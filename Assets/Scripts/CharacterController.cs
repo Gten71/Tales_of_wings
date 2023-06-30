@@ -13,7 +13,7 @@ public class CharacterController : MonoBehaviour
     public Transform firePoint; // Точка, откуда будет выпущен снаряд
     public float bulletSpeed = 10f; // Скорость снаряда
     public int bulletDamage = 50;
-    public int maxAmmo = 5;
+    public int maxAmmo = 50;
     private int currentAmmo;
     public int maxHealth = 100;
     public int currentHealth;
@@ -92,6 +92,10 @@ public class CharacterController : MonoBehaviour
         return currentAmmo;
     }
 
+    public void SetCurrentAmmo(int ammo)
+    {
+        currentAmmo = ammo;
+    }
     public void LookAtTarget()
     {
         // Направляем снаряды на врага, но не поворачиваем персонажа
