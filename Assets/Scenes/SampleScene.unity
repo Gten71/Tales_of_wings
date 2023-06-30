@@ -1300,9 +1300,11 @@ MonoBehaviour:
   bulletSpeed: 10
   bulletDamage: 50
   maxAmmo: 50
+  currentAmmo: 0
   maxHealth: 100
   currentHealth: 100
   shootingArea: {fileID: 359224388}
+  ammoRegenerationRate: 0.5
   moveSpeed: 5
   joystick: {fileID: 725591321}
   animator: {fileID: 267343959}
