@@ -14,6 +14,9 @@ public class DataManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            savedItems = new Item[1];
+            savedObjects = new GameObject[1];
         }
         else
         {
@@ -21,10 +24,14 @@ public class DataManager : MonoBehaviour
         }
     }
 
+
     public void SaveItem(int index, Item item)
     {
-        savedItems[index] = item;
-        // Реализуйте сохранение предмета в вашей системе сохранения данных
+        if (item != null)
+        {
+            savedItems[index] = item;
+            // Реализуйте сохранение предмета в вашей системе сохранения данных
+        }
     }
 
     public Item GetSavedItem(int index)
@@ -35,8 +42,11 @@ public class DataManager : MonoBehaviour
 
     public void SaveObject(int index, GameObject obj)
     {
-        savedObjects[index] = obj;
-        // Реализуйте сохранение игрового объекта в вашей системе сохранения данных
+        if (obj != null)
+        {
+            savedObjects[index] = obj;
+            // Реализуйте сохранение игрового объекта в вашей системе сохранения данных
+        }
     }
 
     public GameObject GetSavedObject(int index)
