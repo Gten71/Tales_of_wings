@@ -13,7 +13,12 @@ public class ShootButton : MonoBehaviour
         shootButton.onClick.AddListener(OnShootButtonClick);
     }
 
-    private void OnShootButtonClick()
+
+          
+
+
+
+        private void OnShootButtonClick()
     {
         if (characterController.HasAmmo() && characterController.target != null && characterController.shootingArea.OverlapPoint(characterController.target.position))
         {
