@@ -13,7 +13,7 @@ public class CharacterController : MonoBehaviour
     public float bulletSpeed = 10f; // Скорость снаряда
     public int bulletDamage = 50;
     public int maxAmmo = 5;
-    private int currentAmmo;
+    public int currentAmmo;
     public int maxHealth = 100;
     public int currentHealth;
 
