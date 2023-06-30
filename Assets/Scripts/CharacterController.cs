@@ -32,6 +32,7 @@ public class CharacterController : MonoBehaviour
     //анимации
     public Animator animator;
     private Vector2 direction;
+    private bool isShootingg = false;
 
     public Transform target; // Ссылка на текущего врага
 
@@ -108,6 +109,7 @@ public class CharacterController : MonoBehaviour
     }
     public void StartShooting()
     {
+
         isShooting = true;
     }
 
@@ -131,9 +133,27 @@ public class CharacterController : MonoBehaviour
 
             // Передаем урон снаряда врагу через компонент EnemyAI
             StartCoroutine(DealDamageDelayed(bullet, bulletDamage));
+            // Проверка, проиграна ли уже анимация 1
+            if (!isShootingg)
+            {
+                // Проигрываем анимацию выстрела
+                animator.SetBool("IsShooting", true);
+                isShootingg = true;
 
+                // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
+                StartCoroutine(PlayIdleAfterShoot());
+            }
             currentAmmo--;
         }
+    }
+    private IEnumerator PlayIdleAfterShoot()
+    {
+        // Ждем, пока проиграется анимация выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Проигрываем анимацию "Idle"
+        animator.SetBool("IsShooting", false);
+        isShootingg = false;
     }
 
     private IEnumerator DealDamageDelayed(GameObject bullet, int damage)
@@ -239,10 +259,40 @@ public class CharacterController : MonoBehaviour
         {
             Die();
         }
+            // Проигрываем анимацию выстрела
+            animator.SetBool("TakeDamage", true);
+
+            // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
+            StartCoroutine(PlayIdleAfterDamage());
+
+    }
+    private IEnumerator PlayIdleAfterDamage()
+    {
+        // Ждем, пока проиграется анимация выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Проигрываем анимацию "Idle"
+        animator.SetBool("TakeDamage", false);
+
     }
 
     private void Die()
     {
+
+            // Проигрываем анимацию выстрела
+            animator.SetBool("Life", false);
+
+            // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
+            StartCoroutine(PlayIdleAfterDie());
+       
+    }
+    private IEnumerator PlayIdleAfterDie()
+    {
+        // Ждем, пока проиграется анимация выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Проигрываем анимацию "Idle"
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
