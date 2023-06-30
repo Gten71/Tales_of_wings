@@ -14,10 +14,13 @@ public class CharacterController : MonoBehaviour
     public float bulletSpeed = 10f; // —корость снар€да
     public int bulletDamage = 50;
     public int maxAmmo = 50;
-    private int currentAmmo;
+    public int currentAmmo;
     public int maxHealth = 100;
     public int currentHealth;
     public Collider2D shootingArea;
+
+    public float ammoRegenerationRate; // —корость пополнени€ патронов в единицах в секунду
+    private float nextAmmoRegenerationTime; // ¬рем€ следующего пополнени€ патронов
 
 
     private bool isShooting = false; // ‘лаг, указывающий, происходит ли стрельба
@@ -32,6 +35,7 @@ public class CharacterController : MonoBehaviour
     //анимации
     public Animator animator;
     private Vector2 direction;
+    private bool isShootingg = false;
 
     public Transform target; // —сылка на текущего врага
 
@@ -42,6 +46,8 @@ public class CharacterController : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentAmmo = maxAmmo;
         currentHealth = maxHealth;
+
+        nextAmmoRegenerationTime = Time.time;
     }
 
     private void Update()
@@ -74,6 +80,20 @@ public class CharacterController : MonoBehaviour
 
         // Ќаправл€ем снар€ды на врага, но не поворачиваем персонажа
         LookAtTarget();
+        if (Time.time >= nextAmmoRegenerationTime)
+        {
+            RegenerateAmmo();
+            // ”станавливаем врем€ следующего пополнени€ патронов
+            nextAmmoRegenerationTime = Time.time + 1f / ammoRegenerationRate;
+        }
+    }
+    private void RegenerateAmmo()
+    {
+        // ѕровер€ем, не достигло ли текущее количество патронов максимального значени€
+        if (currentAmmo < maxAmmo)
+        {
+            currentAmmo++;
+        }
     }
 
     private void FlipCharacter()
@@ -108,6 +128,7 @@ public class CharacterController : MonoBehaviour
     }
     public void StartShooting()
     {
+
         isShooting = true;
     }
 
@@ -131,9 +152,27 @@ public class CharacterController : MonoBehaviour
 
             // ѕередаем урон снар€да врагу через компонент EnemyAI
             StartCoroutine(DealDamageDelayed(bullet, bulletDamage));
+            // ѕроверка, проиграна ли уже анимаци€ 1
+            if (!isShootingg)
+            {
+                // ѕроигрываем анимацию выстрела
+                animator.SetBool("IsShooting", true);
+                isShootingg = true;
 
+                // «апускаем корутину дл€ переключени€ на анимацию "Idle" после проигрывани€ анимации выстрела
+                StartCoroutine(PlayIdleAfterShoot());
+            }
             currentAmmo--;
         }
+    }
+    private IEnumerator PlayIdleAfterShoot()
+    {
+        // ∆дем, пока проиграетс€ анимаци€ выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // ѕроигрываем анимацию "Idle"
+        animator.SetBool("IsShooting", false);
+        isShootingg = false;
     }
 
     private IEnumerator DealDamageDelayed(GameObject bullet, int damage)
@@ -239,10 +278,40 @@ public class CharacterController : MonoBehaviour
         {
             Die();
         }
+            // ѕроигрываем анимацию выстрела
+            animator.SetBool("TakeDamage", true);
+
+            // «апускаем корутину дл€ переключени€ на анимацию "Idle" после проигрывани€ анимации выстрела
+            StartCoroutine(PlayIdleAfterDamage());
+
+    }
+    private IEnumerator PlayIdleAfterDamage()
+    {
+        // ∆дем, пока проиграетс€ анимаци€ выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // ѕроигрываем анимацию "Idle"
+        animator.SetBool("TakeDamage", false);
+
     }
 
     private void Die()
     {
+
+            // ѕроигрываем анимацию выстрела
+            animator.SetBool("Life", false);
+
+            // «апускаем корутину дл€ переключени€ на анимацию "Idle" после проигрывани€ анимации выстрела
+            StartCoroutine(PlayIdleAfterDie());
+       
+    }
+    private IEnumerator PlayIdleAfterDie()
+    {
+        // ∆дем, пока проиграетс€ анимаци€ выстрела
+        yield return new WaitForSeconds(1.5f);
+
+        // ѕроигрываем анимацию "Idle"
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

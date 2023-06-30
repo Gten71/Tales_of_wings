@@ -509,10 +509,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LittleDemon2
       objectReference: {fileID: 0}
-    - target: {fileID: 7237152461951939757, guid: 0c3c00dbf69d4b842b811bd82179615e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8179786968310871003, guid: 0c3c00dbf69d4b842b811bd82179615e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -863,10 +859,6 @@ PrefabInstance:
     - target: {fileID: 7951777627466152334, guid: 57568698625d4e24fa9b9e589276ec5f, type: 3}
       propertyPath: m_Name
       value: LittleDemon
-      objectReference: {fileID: 0}
-    - target: {fileID: 7951777627466152334, guid: 57568698625d4e24fa9b9e589276ec5f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1292,9 +1284,11 @@ MonoBehaviour:
   bulletSpeed: 10
   bulletDamage: 50
   maxAmmo: 50
+  currentAmmo: 0
   maxHealth: 100
   currentHealth: 100
   shootingArea: {fileID: 359224388}
+  ammoRegenerationRate: 0.5
   moveSpeed: 5
   joystick: {fileID: 725591321}
   animator: {fileID: 267343959}
@@ -1387,7 +1381,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 647076911, guid: 9f7dd815274383b459740eab626914c9, type: 3}
+  m_Sprite: {fileID: 587828394, guid: 6bc41c6cd8e27c844aef16faf369609a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1434,7 +1428,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0625, y: 1}
+    oldSize: {x: 1.1875, y: 1.0625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -138508,10 +138502,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3465129319933343753, guid: e2d4953299de9414e9ab3ce29741b606, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5027215394463902378, guid: e2d4953299de9414e9ab3ce29741b606, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -138526,11 +138516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7762109307627096517, guid: e2d4953299de9414e9ab3ce29741b606, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.96
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 7762109307627096517, guid: e2d4953299de9414e9ab3ce29741b606, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 7762109307627096517, guid: e2d4953299de9414e9ab3ce29741b606, type: 3}
       propertyPath: m_LocalPosition.z

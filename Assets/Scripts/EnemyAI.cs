@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -11,6 +12,8 @@ public class EnemyAI : MonoBehaviour
     private Health enemyHealth;
     private HealthBarBehaviour enemyHealthBar;
     private Rigidbody2D rb;
+    //анимации
+    public Animator animator;
 
     private bool isMirrored = false; // Флаг, указывающий, нужно ли зеркально отражать врага
 
@@ -36,7 +39,9 @@ public class EnemyAI : MonoBehaviour
                 {
                     // Начинаем атаку
                     isAttacking = true;
+                    
                     AttackPlayer();
+                    
                 }
             }
             else
@@ -44,6 +49,7 @@ public class EnemyAI : MonoBehaviour
                 // Враг должен приблизиться к персонажу
                 isAttacking = false;
                 MoveTowardsPlayer();
+                
             }
         }
     }
@@ -51,7 +57,9 @@ public class EnemyAI : MonoBehaviour
     private void MoveTowardsPlayer()
     {
         if (target != null)
-        {
+        { 
+           
+            animator.SetBool("isSleep", false);
             Vector3 direction = target.position - transform.position;
             if (direction.x > 0 && isMirrored)
             {
@@ -63,7 +71,10 @@ public class EnemyAI : MonoBehaviour
             }
 
             transform.position = Vector3.MoveTowards(transform.position, target.position, movementSpeed * Time.deltaTime);
+           
         }
+
+        
     }
 
     private void AttackPlayer()
@@ -72,7 +83,20 @@ public class EnemyAI : MonoBehaviour
         if (healthController != null)
         {
             healthController.TakeDamage(damageAmount);
+
+            animator.SetBool("isAtake", true);
+            animator.SetBool("isMove", true);
+            StartCoroutine(Atake());
         }
+    }
+    private IEnumerator Atake()
+    {
+        // Ждем, пока проиграется анимация выстрела
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        // Проигрываем анимацию "Idle"
+        animator.SetBool("isAtake", false);
+
     }
 
     public void TakeDamage(int damage)
@@ -84,6 +108,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            animator.SetBool("isMove", true);
             target = collision.transform;
             isAttacking = true;
         }
@@ -93,12 +118,16 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            target = null;
-            isAttacking = false;
+            if (target == collision.transform)
+            {
+                target = null;
+                isAttacking = false;
+                animator.SetBool("isMove", false);
+            }
         }
     }
 
-    private void FlipEnemy()
+        private void FlipEnemy()
     {
         isMirrored = !isMirrored;
         transform.Rotate(0f, 180f, 0f);
