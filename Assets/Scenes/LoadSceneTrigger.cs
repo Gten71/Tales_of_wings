@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneTrigger : MonoBehaviour
 {
-    public int sceneIndex = 0; // Индекс сцены для загрузки
+    public int sceneIndex; // Индекс сцены для загрузки
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
