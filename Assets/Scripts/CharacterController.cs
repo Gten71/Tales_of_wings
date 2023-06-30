@@ -308,7 +308,7 @@ public class CharacterController : MonoBehaviour
     private IEnumerator PlayIdleAfterDie()
     {
         // Ждем, пока проиграется анимация выстрела
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(1.5f);
 
         // Проигрываем анимацию "Idle"
 
