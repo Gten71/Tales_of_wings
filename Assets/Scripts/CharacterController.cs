@@ -14,10 +14,13 @@ public class CharacterController : MonoBehaviour
     public float bulletSpeed = 10f; // —корость снар€да
     public int bulletDamage = 50;
     public int maxAmmo = 50;
-    private int currentAmmo;
+    public int currentAmmo;
     public int maxHealth = 100;
     public int currentHealth;
     public Collider2D shootingArea;
+
+    public float ammoRegenerationRate; // —корость пополнени€ патронов в единицах в секунду
+    private float nextAmmoRegenerationTime; // ¬рем€ следующего пополнени€ патронов
 
 
     private bool isShooting = false; // ‘лаг, указывающий, происходит ли стрельба
@@ -43,6 +46,8 @@ public class CharacterController : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         currentAmmo = maxAmmo;
         currentHealth = maxHealth;
+
+        nextAmmoRegenerationTime = Time.time;
     }
 
     private void Update()
@@ -75,6 +80,20 @@ public class CharacterController : MonoBehaviour
 
         // Ќаправл€ем снар€ды на врага, но не поворачиваем персонажа
         LookAtTarget();
+        if (Time.time >= nextAmmoRegenerationTime)
+        {
+            RegenerateAmmo();
+            // ”станавливаем врем€ следующего пополнени€ патронов
+            nextAmmoRegenerationTime = Time.time + 1f / ammoRegenerationRate;
+        }
+    }
+    private void RegenerateAmmo()
+    {
+        // ѕровер€ем, не достигло ли текущее количество патронов максимального значени€
+        if (currentAmmo < maxAmmo)
+        {
+            currentAmmo++;
+        }
     }
 
     private void FlipCharacter()
