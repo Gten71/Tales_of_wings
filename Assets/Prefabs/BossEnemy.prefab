@@ -377,9 +377,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c69d981d8391e04184d0438760eb032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
-  attackRange: 3
-  damageAmount: 70
+  movementSpeed: 1.5
+  attackRange: 2.7
+  damageAmount: 33
   animator: {fileID: 8505831862524620750}
 --- !u!114 &6115183624100912234
 MonoBehaviour:
@@ -393,8 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f25487e3217b58468fc930f7972e2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 700
-  currentHealth: 700
+  maxHealth: 1500
+  currentHealth: 1500
   healthBar: {fileID: 4834494309788018962}
   itemPrefab: {fileID: 2287114891695813455, guid: a3e5102066c7fa34ca5536dbf52880f2, type: 3}
   secondItemPrefab: {fileID: 2164617879829760699, guid: 3d086f4257c762f48836f1d80a36da2f, type: 3}

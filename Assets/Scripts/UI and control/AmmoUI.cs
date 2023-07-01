@@ -15,9 +15,12 @@ public class AmmoUI : MonoBehaviour
         // Получаем ссылку на экземпляр DataManager
         dataManager = FindObjectOfType<DataManager>();
 
-        // Пример загрузки данных
-        int savedAmmo = dataManager.Ammo;
-        characterController.SetCurrentAmmo(savedAmmo);
+        // Загрузка сохраненного количества патронов при старте
+        if (dataManager != null)
+        {
+            int savedAmmo = dataManager.Ammo;
+            characterController.SetCurrentAmmo(savedAmmo);
+        }
     }
 
     private void Update()
@@ -27,7 +30,11 @@ public class AmmoUI : MonoBehaviour
         // Обновляем значение текстового элемента с количеством патронов
         ammoText.text = "Ammo: " + currentAmmo.ToString();
 
-        // Пример сохранения данных при изменении количества патронов
-        dataManager.Ammo = currentAmmo;
+        // Сохраняем данные при изменении количества патронов
+        if (dataManager != null)
+        {
+            dataManager.Ammo = currentAmmo;
+        }
     }
+
 }

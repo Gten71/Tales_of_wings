@@ -16,11 +16,10 @@ public class EnemySpawnManager : MonoBehaviour
             spawnPoints.Add(child);
         }
 
-        // Создаем врагов на случайной точке спавна
         SpawnEnemy();
     }
 
-    private void SpawnEnemy()
+    private void SpawnEnemy() // функция создания клона префаба врага 
     {
         // Выбираем случайную точку спавна из списка
         int randomIndex = Random.Range(0, spawnPoints.Count);
@@ -29,7 +28,6 @@ public class EnemySpawnManager : MonoBehaviour
         // Создаем врага на выбранной точке спавна
         GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
 
-        // Дополнительные действия при создании врага, например, настройка его параметров или ссылок на другие компоненты
     }
 }
 

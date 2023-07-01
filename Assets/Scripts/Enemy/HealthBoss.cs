@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class HealthBoss : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBarBehaviour healthBar;
+    public HealthBarBoss healthBar;
     public GameObject itemPrefab;
     public GameObject secondItemPrefab;
+    public GameObject thridItemPrefab;
     public Animator animator;
 
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth, maxHealth);
-        healthBar.gameObject.SetActive(false);
     }
 
     public void TakeDamage(int damage)
@@ -25,18 +25,13 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+
+
             Die();
         }
 
         if (healthBar != null)
         {
-            // Update the health bar with the new health values
-            healthBar.SetHealth(currentHealth, maxHealth);
-            healthBar.gameObject.SetActive(true);
-        }
-        if (healthBar != null)
-        {
-            // Update the health bar with the new health values
             healthBar.SetHealth(currentHealth, maxHealth);
             animator.SetBool("isTakeDamage", true);
 
@@ -56,18 +51,16 @@ public class Health : MonoBehaviour
 
 
     }
-
     private IEnumerator Dide()
     {
         // Ждем, пока проиграется анимация выстрела
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Проигрываем анимацию "Idle"
+        // Проигрываем анимацию "Idle" у босса 
         animator.SetBool("isDead", false);
         GameObject itemObj = Instantiate(itemPrefab, transform.position, Quaternion.identity);
-
         GameObject secondItemObj = Instantiate(secondItemPrefab, transform.position, Quaternion.identity);
-
+        GameObject thridItemObj = Instantiate(thridItemPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
@@ -80,6 +73,3 @@ public class Health : MonoBehaviour
 
     }
 }
-
-
-

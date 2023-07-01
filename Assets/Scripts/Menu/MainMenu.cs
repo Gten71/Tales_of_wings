@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Menu_Cod : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     void Start()
     {

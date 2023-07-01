@@ -49,7 +49,17 @@ public class CharacterController : MonoBehaviour
         currentHealth = maxHealth;
 
         nextAmmoRegenerationTime = Time.time;
+        // Получаем ссылку на экземпляр DataManager
+        DataManager dataManager = FindObjectOfType<DataManager>();
+
+        // Загружаем сохраненное количество патронов и здоровье при старте
+        if (dataManager != null)
+        {
+            currentAmmo = dataManager.Ammo;
+            currentHealth = dataManager.HP;
+        }
     }
+
 
     private void Update()
     {
@@ -79,7 +89,7 @@ public class CharacterController : MonoBehaviour
         // Проверяем, есть ли ближайший враг в зоне видимости
         FindNearestEnemy();
 
-        // Направляем снаряды на врага, но не поворачиваем персонажа
+        // Направляем снаряды 
         LookAtTarget();
         if (Time.time >= nextAmmoRegenerationTime)
         {
@@ -266,7 +276,7 @@ public class CharacterController : MonoBehaviour
             // Проигрываем анимацию выстрела
             animator.SetBool("TakeDamage", true);
 
-            // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
+            // Запускаем корутину для переключения на анимацию  после проигрывания анимации выстрела
             StartCoroutine(PlayIdleAfterDamage());
 
     }
@@ -275,7 +285,7 @@ public class CharacterController : MonoBehaviour
         // Ждем, пока проиграется анимация выстрела
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        // Проигрываем анимацию "Idle"
+        
         animator.SetBool("TakeDamage", false);
 
     }
@@ -284,19 +294,16 @@ public class CharacterController : MonoBehaviour
     private void Die()
     {
 
-            // Проигрываем анимацию выстрела
             animator.SetBool("Life", false);
 
-            // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
             StartCoroutine(PlayIdleAfterDie());
        
     }
     private IEnumerator PlayIdleAfterDie()
     {
-        // Ждем, пока проиграется анимация выстрела
         yield return new WaitForSeconds(1.5f);
 
-        // Проигрываем анимацию "Idle"
+        
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

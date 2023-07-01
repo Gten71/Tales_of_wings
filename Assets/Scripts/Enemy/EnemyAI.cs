@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     //анимации
     public Animator animator;
 
-    private bool isMirrored = false; // Флаг, указывающий, нужно ли зеркально отражать врага
+    private bool isMirrored = false;
 
     private void Start()
     {
@@ -37,7 +37,6 @@ public class EnemyAI : MonoBehaviour
                 // Враг находится в пределах атаки
                 if (!isAttacking)
                 {
-                    // Начинаем атаку
                     isAttacking = true;
                     
                     AttackPlayer();
@@ -54,7 +53,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void MoveTowardsPlayer()
+    private void MoveTowardsPlayer() // функция движения к персонажу 
     {
         if (target != null)
         { 
@@ -77,7 +76,7 @@ public class EnemyAI : MonoBehaviour
         
     }
 
-    private void AttackPlayer()
+    private void AttackPlayer() // функция нанесения урона игроку
     {
         CharacterController healthController = target.GetComponent<CharacterController>();
         if (healthController != null)
@@ -104,6 +103,8 @@ public class EnemyAI : MonoBehaviour
         enemyHealth.TakeDamage(damage);
     }
 
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -127,7 +128,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-        private void FlipEnemy()
+        private void FlipEnemy() // это добавлено просто что бы враги переворачивались на игрока
     {
         isMirrored = !isMirrored;
         transform.Rotate(0f, 180f, 0f);

@@ -593,8 +593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c7ac5c2e63c814a8c7ec7efe7646e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 120
-  currentHealth: 120
+  maxHealth: 60
+  currentHealth: 60
   healthBar: {fileID: 8968125633480904759}
   itemPrefab: {fileID: 2287114891695813455, guid: a3e5102066c7fa34ca5536dbf52880f2, type: 3}
   secondItemPrefab: {fileID: 2581513847486903005, guid: 5120d0118a4afc04bbe4b5ef8c5f1529, type: 3}
@@ -611,9 +611,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c69d981d8391e04184d0438760eb032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2.5
+  movementSpeed: 4
   attackRange: 1.5
-  damageAmount: 20
+  damageAmount: 10
   animator: {fileID: 6152052746531920319}
 --- !u!61 &4450592776772572009
 BoxCollider2D:

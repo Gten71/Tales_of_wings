@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class HealthBoss : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public HealthBarBoss healthBar;
+    public HealthBarBehaviour healthBar;
     public GameObject itemPrefab;
     public GameObject secondItemPrefab;
-    public GameObject thridItemPrefab;
     public Animator animator;
 
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth, maxHealth);
+        healthBar.gameObject.SetActive(false);
     }
 
     public void TakeDamage(int damage)
@@ -25,24 +25,28 @@ public class HealthBoss : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-           
-            
             Die();
         }
 
         if (healthBar != null)
         {
-            // Update the health bar with the new health values
+            // Обновляем хп с новым значением
+            healthBar.SetHealth(currentHealth, maxHealth);
+            healthBar.gameObject.SetActive(true);
+        }
+        if (healthBar != null)
+        {
+            // Обновляем хилбар
             healthBar.SetHealth(currentHealth, maxHealth);
             animator.SetBool("isTakeDamage", true);
 
-        // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
-        StartCoroutine(Damage());
+            // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
+            StartCoroutine(Damage());
         }
-       
-        
+
+
     }
-    private IEnumerator Damage()
+    private IEnumerator Damage() // 
     {
         // Ждем, пока проиграется анимация выстрела
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
@@ -52,6 +56,7 @@ public class HealthBoss : MonoBehaviour
 
 
     }
+
     private IEnumerator Dide()
     {
         // Ждем, пока проиграется анимация выстрела
@@ -60,8 +65,9 @@ public class HealthBoss : MonoBehaviour
         // Проигрываем анимацию "Idle"
         animator.SetBool("isDead", false);
         GameObject itemObj = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+
         GameObject secondItemObj = Instantiate(secondItemPrefab, transform.position, Quaternion.identity);
-        GameObject thridItemObj = Instantiate(thridItemPrefab, transform.position, Quaternion.identity);
+
         Destroy(gameObject);
     }
 
@@ -71,6 +77,9 @@ public class HealthBoss : MonoBehaviour
 
         // Запускаем корутину для переключения на анимацию "Idle" после проигрывания анимации выстрела
         StartCoroutine(Dide());
-        
+
     }
 }
+
+
+

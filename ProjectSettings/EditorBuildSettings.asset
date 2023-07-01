@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 8c5d1c84c93ce784c9b9125c06535488
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Artem.unity
     guid: 29fd1e7bab5145d4c973022b4751789f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:

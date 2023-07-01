@@ -14,10 +14,10 @@ public class HealthBarUI : MonoBehaviour
         // Установите максимальное значение полоски здоровья равным максимальному здоровью персонажа
         healthSlider.maxValue = characterController.maxHealth;
 
-        // Найти или создать экземпляр DataManager
+        // Получаем ссылку на экземпляр DataManager
         dataManager = FindObjectOfType<DataManager>();
 
-        // Загрузить сохраненное здоровье, если оно есть
+        // Загрузка сохраненного здоровья при старте
         if (dataManager != null)
         {
             characterController.currentHealth = dataManager.HP;
@@ -26,7 +26,7 @@ public class HealthBarUI : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Сохранить текущее здоровье при уничтожении объекта
+        // Сохранение текущего здоровья при уничтожении объекта
         if (dataManager != null)
         {
             dataManager.HP = characterController.currentHealth;
@@ -35,8 +35,9 @@ public class HealthBarUI : MonoBehaviour
 
     private void Update()
     {
-        // Обновите значение полоски здоровья равным текущему здоровью персонажа
+        // Обновление значения полоски здоровья равным текущему здоровью персонажа
         healthSlider.value = characterController.currentHealth;
     }
+
 }
 
