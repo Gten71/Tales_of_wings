@@ -240,7 +240,7 @@ Transform:
   m_Children:
   - {fileID: 2842160910169667532}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2158973315096455239
 SpriteRenderer:
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c69d981d8391e04184d0438760eb032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 3.5
   attackRange: 2
   damageAmount: 40
   animator: {fileID: 5385812843829990859}
@@ -464,6 +464,7 @@ MonoBehaviour:
   currentHealth: 100
   healthBar: {fileID: 7765361273916767330}
   itemPrefab: {fileID: 2287114891695813455, guid: a3e5102066c7fa34ca5536dbf52880f2, type: 3}
+  secondItemPrefab: {fileID: 2581513847486903005, guid: 5120d0118a4afc04bbe4b5ef8c5f1529, type: 3}
   animator: {fileID: 5385812843829990859}
 --- !u!1 &8523612625475447942
 GameObject:

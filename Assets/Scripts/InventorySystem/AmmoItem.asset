@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fd877955eb3cb4c9326364ad43e655, type: 3}
+  m_Name: AmmoItem
+  m_EditorClassIdentifier: 
+  Name: Ammo
+  Description: Insecure ammo
+  icon: {fileID: -1051417600, guid: 9f7dd815274383b459740eab626914c9, type: 3}
+  CurrP: 1
+  CurrI: 0
+  CurrMax: 5
+  isHealing: 0
+  PowerHealing: 0
+  isAmmoIncrease: 1
+  AmmoIncrease: 1

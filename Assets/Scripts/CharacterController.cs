@@ -11,13 +11,14 @@ public class CharacterController : MonoBehaviour
     public string enemyTag = "Enemy"; // Тег врага
     public GameObject bulletPrefab; // Префаб снаряда
     public Transform firePoint; // Точка, откуда будет выпущен снаряд
-    public float bulletSpeed = 10f; // Скорость снаряда
-    public int bulletDamage = 50;
-    public int maxAmmo = 50;
+    public float bulletSpeed = 10; 
+    public int bulletDamage;
+    public int maxAmmo = 12;
     public int currentAmmo;
     public int maxHealth = 100;
     public int currentHealth;
     public Collider2D shootingArea;
+
 
     public float ammoRegenerationRate; // Скорость пополнения патронов в единицах в секунду
     private float nextAmmoRegenerationTime; // Время следующего пополнения патронов
@@ -191,29 +192,6 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    //public void Shoot()
-    //{
-    //    // Проверяем, есть ли враг в зоне видимости
-    //    if (target != null && HasAmmo())
-    //    {
-    //        // Создаем снаряд и задаем ему направление и скорость
-    //        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    //        Rigidbody2D bulletRigidbody = bullet.GetComponent<Rigidbody2D>();
-
-    //        // Направление движения снаряда - от FirePoint к врагу
-    //        Vector2 direction = target.position - firePoint.position;
-    //        bulletRigidbody.velocity = direction.normalized * bulletSpeed;
-
-    //        // Передаем урон снаряда врагу через компонент EnemyAI
-    //        EnemyAI enemy = target.GetComponent<EnemyAI>();
-    //        if (enemy != null)
-    //        {
-    //            enemy.TakeDamage(bulletDamage);
-    //        }
-
-    //        currentAmmo--;
-    //    }
-    //}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -265,7 +243,14 @@ public class CharacterController : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
-                                                                                        
+    public void IncreaseAmmo(int amount)
+    {
+        currentAmmo += amount;
+        if (currentAmmo > maxAmmo)
+            currentAmmo = maxAmmo;
+    }
+
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -294,6 +279,7 @@ public class CharacterController : MonoBehaviour
         animator.SetBool("TakeDamage", false);
 
     }
+
 
     private void Die()
     {

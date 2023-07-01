@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fd877955eb3cb4c9326364ad43e655, type: 3}
+  m_Name: Money
+  m_EditorClassIdentifier: 
+  Name: Money
+  Description: You can use for nothing
+  icon: {fileID: 958796408, guid: a054ab86a5eb5b24098db2c96e22d4b9, type: 3}
+  CurrP: 1
+  CurrI: 7
+  CurrMax: 999
+  isHealing: 0
+  PowerHealing: 0
+  isAmmoIncrease: 0
+  AmmoIncrease: 0

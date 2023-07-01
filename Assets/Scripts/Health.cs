@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public int currentHealth;
     public HealthBarBehaviour healthBar;
     public GameObject itemPrefab;
+    public GameObject secondItemPrefab;
     public Animator animator;
 
     private void Start()
@@ -64,6 +65,9 @@ public class Health : MonoBehaviour
         // Проигрываем анимацию "Idle"
         animator.SetBool("isDead", false);
         GameObject itemObj = Instantiate(itemPrefab, transform.position, Quaternion.identity);
+
+        GameObject secondItemObj = Instantiate(secondItemPrefab, transform.position, Quaternion.identity);
+
         Destroy(gameObject);
     }
 

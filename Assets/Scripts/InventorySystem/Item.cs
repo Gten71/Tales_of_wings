@@ -14,4 +14,7 @@ public class Item : ScriptableObject
     public int CurrMax;
     public bool isHealing;
     public int PowerHealing;
+
+    public bool isAmmoIncrease;
+    public int AmmoIncrease;
 }

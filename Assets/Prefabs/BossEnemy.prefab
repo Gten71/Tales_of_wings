@@ -231,7 +231,7 @@ Transform:
   m_Children:
   - {fileID: 3535905495939223897}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2513295099604099819
 SpriteRenderer:
@@ -377,9 +377,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c69d981d8391e04184d0438760eb032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  attackRange: 2
-  damageAmount: 10
+  movementSpeed: 1
+  attackRange: 3
+  damageAmount: 70
   animator: {fileID: 8505831862524620750}
 --- !u!114 &6115183624100912234
 MonoBehaviour:
@@ -393,10 +393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f25487e3217b58468fc930f7972e2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
-  currentHealth: 500
+  maxHealth: 700
+  currentHealth: 700
   healthBar: {fileID: 4834494309788018962}
   itemPrefab: {fileID: 2287114891695813455, guid: a3e5102066c7fa34ca5536dbf52880f2, type: 3}
+  secondItemPrefab: {fileID: 2164617879829760699, guid: 3d086f4257c762f48836f1d80a36da2f, type: 3}
+  thridItemPrefab: {fileID: 2581513847486903005, guid: 5120d0118a4afc04bbe4b5ef8c5f1529, type: 3}
   animator: {fileID: 8505831862524620750}
 --- !u!50 &1659573636749303225
 Rigidbody2D:
@@ -530,9 +532,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 500
+  m_MaxValue: 700
   m_WholeNumbers: 1
-  m_Value: 500
+  m_Value: 700
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

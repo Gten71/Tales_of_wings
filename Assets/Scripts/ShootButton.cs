@@ -12,12 +12,6 @@ public class ShootButton : MonoBehaviour
         // Подписываемся на событие нажатия кнопки
         shootButton.onClick.AddListener(OnShootButtonClick);
     }
-
-
-          
-
-
-
         private void OnShootButtonClick()
     {
         if (characterController.HasAmmo() && characterController.target != null && characterController.shootingArea.OverlapPoint(characterController.target.position))

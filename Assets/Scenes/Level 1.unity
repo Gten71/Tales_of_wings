@@ -2242,7 +2242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 253.4, y: -12.6}
+  m_AnchoredPosition: {x: 222.2, y: -3.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706057673
@@ -140153,13 +140153,13 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3311990072515883742, guid: bc879dc3aa39da5438ea277c43ec0556, type: 3}
   firePoint: {fileID: 1139541866}
   bulletSpeed: 10
-  bulletDamage: 50
-  maxAmmo: 50
-  currentAmmo: 0
+  bulletDamage: 0
+  maxAmmo: 12
+  currentAmmo: 12
   maxHealth: 100
   currentHealth: 100
   shootingArea: {fileID: 189227410}
-  ammoRegenerationRate: 0
+  ammoRegenerationRate: 0.2
   moveSpeed: 5
   joystick: {fileID: 281359881}
   animator: {fileID: 2103409908}
@@ -140251,7 +140251,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 14
   m_Sprite: {fileID: 647076911, guid: 9f7dd815274383b459740eab626914c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

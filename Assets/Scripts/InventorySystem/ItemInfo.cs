@@ -45,9 +45,16 @@ public class ItemInfo : MonoBehaviour
     {
         UseItems.instance.UseHealPosion(itemInf);
 
+        // Проверка, является ли предмет предметом для повышения боеприпасов
+        if (itemInf.isAmmoIncrease )
+        {
+            CharacterController.Instance.IncreaseAmmo(itemInf.AmmoIncrease);
+        }
+
         cerSlot.ClearSlot();
         Close();
     }
+
 
     public void DropItem()
     {

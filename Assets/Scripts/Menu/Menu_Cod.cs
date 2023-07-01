@@ -15,7 +15,7 @@ public class Menu_Cod : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Load()
     {

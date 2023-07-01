@@ -15,8 +15,8 @@ public class DataManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
 
-            savedItems = new Item[1];
-            savedObjects = new GameObject[1];
+            savedItems = new Item[6];
+            savedObjects = new GameObject[6];
         }
         else
         {
