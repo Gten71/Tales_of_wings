@@ -46,4 +46,5 @@ Create: Complete saved system ( Gten, YO-U ), Balance all enemy and add on map (
 
 
 Короче кто это читает это пздц так нам просто врали и этот весь репозиторий рассчитывался  на тз от одной компании но оказалось нам просто наврали(
+<br>
 In short, who reads this is the f*ckd up, so they just lied to us and this entire repository was calculated on TA from one company, but it turned out they just lied to us (
